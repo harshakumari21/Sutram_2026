@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration | SUTRAM 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Your existing main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="registration-page">
+
+
+<!-- BACKGROUND -->
+
+<div class="registration-bg-grid"></div>
+
+<div class="registration-glow registration-glow-one"></div>
+
+<div class="registration-glow registration-glow-two"></div>
+
+
+<!-- MAIN -->
+
+<main class="registration-wrapper">
+
+
+    <!-- BACK TO HOME -->
+
+    <a href="index.html" class="registration-back-home">
+
+        <span>←</span>
+
+        Back to Home
+
+    </a>
+
+
+    <!-- MAIN LAYOUT -->
+
+    <div class="registration-layout">
+
+
+        <!-- =====================================
+             LEFT SECTION
+        ====================================== -->
+
+        <section class="registration-brand-section">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="registration-logo-link">
+
+                <img
+                        src="sutram_exact_full_logo.png"
+                        alt="SUTRAM 2026"
+                        class="registration-sutram-logo"
+                >
+
+            </a>
+
+
+            <!-- TAG -->
+
+            <div class="registration-tag">
+
+                SUTRAM 2026
+
+            </div>
+
+
+            <!-- HEADING -->
+
+            <h1>
+
+                Begin your<br>
+
+                <span>journey.</span>
+
+            </h1>
+
+
+            <!-- DESCRIPTION -->
+
+            <p>
+
+                Register for SUTRAM 2026 and become a part of
+                an exciting journey of innovation, cyber investigation,
+                digital forensics and problem solving.
+
+            </p>
+
+
+            <!-- STEPS -->
+
+            <div class="registration-steps">
+
+
+                <div class="registration-step">
+
+                    <div class="step-number">
+
+                        01
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Create Account
+                        </strong>
+
+                        <span>
+                                Register with your details
+                            </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="registration-step">
+
+                    <div class="step-number">
+
+                        02
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Join SUTRAM
+                        </strong>
+
+                        <span>
+                                Begin your hackathon journey
+                            </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             REGISTRATION CARD
+        ====================================== -->
+
+        <section class="registration-card">
+
+
+            <!-- HEADER -->
+
+            <div class="registration-card-header">
+
+                    <span class="small-label">
+
+                        PARTICIPANT REGISTRATION
+
+                    </span>
+
+
+                <h2>
+
+                    Create your <span>account.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Fill in your details to register for SUTRAM 2026.
+
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form class="registration-form">
+
+
+                <!-- EMAIL -->
+
+                <div class="registration-form-group">
+
+                    <label for="email">
+
+                        Email Address
+
+                    </label>
+
+
+                    <div class="registration-input-wrapper">
+
+                            <span class="registration-input-icon">
+
+                                ✉
+
+                            </span>
+
+
+                        <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="registration-form-group">
+
+                    <label for="password">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="registration-input-wrapper">
+
+                            <span class="registration-input-icon">
+
+                                ●
+
+                            </span>
+
+
+                        <input
+                                type="password"
+                                id="password"
+                                placeholder="Create a password"
+                                required
+                        >
+
+
+                        <button
+                                type="button"
+                                class="registration-password-toggle"
+                                id="registrationPasswordToggle"
+                                aria-label="Show password"
+                        >
+
+                            ◉
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLLEGE / INSTITUTE SPOC -->
+
+                <div class="registration-form-group">
+
+                    <label for="spoc">
+
+                        College / Institute SPOC
+
+                    </label>
+
+
+                    <div class="registration-input-wrapper">
+
+                            <span class="registration-input-icon">
+
+                                ◈
+
+                            </span>
+
+
+                        <input
+                                type="text"
+                                id="spoc"
+                                placeholder="Enter College/Institute SPOC"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- USER ROLE -->
+
+                <div class="registration-form-group">
+
+                    <label for="role">
+
+                        Select User Role
+
+                    </label>
+
+
+                    <div class="registration-input-wrapper">
+
+                            <span class="registration-input-icon">
+
+                                ◉
+
+                            </span>
+
+
+                        <select
+                                id="role"
+                                required
+                        >
+
+                            <option value="" selected disabled>
+
+                                Please Select User Role
+
+                            </option>
+
+
+                            <option value="super-admin">
+
+                                Super Admin
+
+                            </option>
+
+
+                            <option value="review-committee">
+
+                                Review Committee Personnel
+
+                            </option>
+
+
+                            <option value="problem-creator">
+
+                                Problem Statement Creators/Challengers
+
+                            </option>
+
+
+                            <option value="college-spoc">
+
+                                College/Institute SPOC
+
+                            </option>
+
+
+                            <option value="team-leader">
+
+                                Team Leader
+
+                            </option>
+
+
+                            <option value="evaluator">
+
+                                Evaluator
+
+                            </option>
+
+                        </select>
+
+
+                        <span class="registration-select-arrow">
+
+                                ▾
+
+                            </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <label class="registration-terms">
+
+                    <input type="checkbox" required>
+
+
+                    <span>
+
+                            I agree to the
+
+                            <a href="#">
+
+                                Terms & Conditions
+
+                            </a>
+
+                            and confirm that the information provided is correct.
+
+                        </span>
+
+                </label>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                        type="submit"
+                        class="registration-submit-btn"
+                >
+
+                    Create Account
+
+                    <span>
+
+                            →
+
+                        </span>
+
+                </button>
+
+
+                <!-- LOGIN -->
+
+                <div class="registration-login-text">
+
+                    <p>
+
+                        Already registered?
+
+                    </p>
+
+
+                    <a href="login.html">
+
+                        Login Now ↗
+
+                    </a>
+
+                </div>
+
+
+            </form>
+
+
+            <!-- FOOTER -->
+
+            <div class="registration-card-footer">
+
+                <span></span>
+
+                SUTRAM 2026 PARTICIPANT REGISTRATION
+
+                <span></span>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+<!-- PASSWORD SHOW / HIDE -->
+
+<script>
+
+    const registrationPasswordToggle =
+        document.getElementById(
+            "registrationPasswordToggle"
+        );
+
+
+    const registrationPassword =
+        document.getElementById(
+            "password"
+        );
+
+
+    registrationPasswordToggle.addEventListener(
+        "click",
+        function () {
+
+            if (
+                registrationPassword.type === "password"
+            ) {
+
+                registrationPassword.type = "text";
+
+                registrationPasswordToggle.innerHTML = "◉";
+
+            } else {
+
+                registrationPassword.type = "password";
+
+                registrationPasswordToggle.innerHTML = "◉";
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

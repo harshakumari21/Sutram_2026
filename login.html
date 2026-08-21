@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | SUTRAM 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+<!-- BACKGROUND DECORATION -->
+<div class="login-bg-grid"></div>
+<div class="login-glow glow-one"></div>
+<div class="login-glow glow-two"></div>
+
+
+<!-- =========================
+     LOGIN PAGE
+========================== -->
+
+<main class="login-wrapper">
+
+  <!-- BACK TO HOME -->
+  <a href="index.html" class="back-home">
+    <span>←</span>
+    Back to Home
+  </a>
+
+
+  <div class="login-layout">
+
+
+    <!-- LEFT SIDE -->
+    <section class="login-brand-section">
+
+      <a href="index.html" class="login-logo-link">
+
+        <img src="sutram_exact_full_logo.png"
+             alt="SUTRAM 2026"
+             class="login-sutram-logo">
+
+      </a>
+
+
+      <div class="login-brand-content">
+
+                    <span class="login-tag">
+                        SUTRAM 2026
+                    </span>
+
+        <h1>
+          Every trace<br>
+          tells a <span>story.</span>
+        </h1>
+
+        <p>
+          Welcome to the SUTRAM 2026 participant portal.
+          Login to access your hackathon journey, registration
+          details and important updates.
+        </p>
+
+      </div>
+
+
+      <!-- SMALL FEATURE LIST -->
+      <div class="login-features">
+
+        <div class="login-feature">
+
+          <div class="feature-icon">
+            01
+          </div>
+
+          <div>
+            <strong>Secure Access</strong>
+            <span>Your information stays protected</span>
+          </div>
+
+        </div>
+
+
+        <div class="login-feature">
+
+          <div class="feature-icon">
+            02
+          </div>
+
+          <div>
+            <strong>Track Your Journey</strong>
+            <span>Access updates and participation details</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE LOGIN CARD -->
+    <section class="login-card">
+
+      <div class="login-card-header">
+
+                    <span class="small-label">
+                        PARTICIPANT PORTAL
+                    </span>
+
+        <h2>
+          Welcome <span>back.</span>
+        </h2>
+
+        <p>
+          Enter your details to continue your journey.
+        </p>
+
+      </div>
+
+
+      <form class="login-form">
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+            <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- PASSWORD -->
+        <div class="form-group">
+
+          <div class="password-label-row">
+
+            <label for="password">
+              Password
+            </label>
+
+            <a href="#" class="forgot-password">
+              Forgot Password?
+            </a>
+
+          </div>
+
+
+          <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ◉
+                            </span>
+
+            <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+            >
+
+            <button
+                    type="button"
+                    class="password-toggle"
+                    id="passwordToggle"
+                    aria-label="Show Password"
+            >
+              ◉
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- REMEMBER ME -->
+        <div class="login-options">
+
+          <label class="remember-me">
+
+            <input type="checkbox">
+
+            <span class="custom-checkbox"></span>
+
+            Remember me
+
+          </label>
+
+        </div>
+
+
+        <!-- LOGIN BUTTON -->
+        <button type="submit" class="login-submit-btn">
+
+          Login to Portal
+
+          <span>
+                            →
+                        </span>
+
+        </button>
+
+
+        <!-- DIVIDER -->
+        <div class="login-divider">
+
+          <span></span>
+
+          <p>OR</p>
+
+          <span></span>
+
+        </div>
+
+
+        <!-- GOOGLE LOGIN PLACEHOLDER -->
+        <button
+                type="button"
+                class="google-login-btn"
+        >
+
+                        <span class="google-icon">
+                            G
+                        </span>
+
+          Continue with Google
+
+        </button>
+
+
+        <!-- REGISTER -->
+        <div class="login-register-text">
+
+          <p>
+            New to SUTRAM 2026?
+          </p>
+
+          <a href="registration.html">
+            Register Now
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </form>
+
+
+      <!-- CARD FOOTER -->
+      <div class="login-card-footer">
+
+        <span></span>
+
+        Secure Participant Access · SUTRAM 2026
+
+        <span></span>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<script>
+
+  const passwordToggle =
+          document.getElementById("passwordToggle");
+
+  const passwordInput =
+          document.getElementById("password");
+
+
+  passwordToggle.addEventListener("click", function () {
+
+    if (passwordInput.type === "password") {
+
+      passwordInput.type = "text";
+
+      passwordToggle.innerHTML = "◉";
+
+    } else {
+
+      passwordInput.type = "password";
+
+      passwordToggle.innerHTML = "◉";
+
+    }
+
+  });
+
+</script>
+
+</body>
+
+</html>
