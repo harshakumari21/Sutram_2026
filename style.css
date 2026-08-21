@@ -647,7 +647,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   background: #eef9fd;
   padding: 10px 0;
-  color: #005b96;
+  color: #f5b400;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 14px;
@@ -658,12 +658,15 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   overflow: hidden;
 }
-.notification-marquee marquee {
-  width: 100%;
-}
-.notification-marquee .marquee-text {
+
+ .notification-marquee marquee {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .notification-marquee .marquee-text {
   display: inline-block;
-  color: #006da8;
+  color: #f5b400;
 }
 .notification-marquee .highlight {
   color: #00a6d6;
