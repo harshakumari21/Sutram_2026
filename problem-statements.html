@@ -1,525 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SUTRAM 2026 — Problem Statements" />
+  <title>SUTRAM 2026 | Problem Statements</title>
 
-  <title>Problem Statements | SUTRAM 2026</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="problem-statements.css" />
 </head>
 
-
-<body class="problem-statements-page">
-
-  <header class="topbar">
-    <div class="topbar-left">
-      <a href="index.html" aria-label="IGDTUW home">
-        <img class="igdtuw-image" src="igdtuw-logo.473df1c6cbcd03a6bf01.png" alt="IGDTUW logo" />
-      </a>
-    </div>
-
-    <a class="topbar-center-logo" href="index.html" aria-label="SUTRAM 2026 home">
-      <img src="sutram_exact_full_logo.png" alt="SUTRAM 2026" />
-    </a>
-
-    <div class="topbar-right">
-      <img class="logo-image" src="Emblem_of_India_with_transparent_background.png" alt="Government of India emblem" />
-      <img class="isea-image" src="isea_logo.png" alt="ISEA logo" />
-      <a class="login-btn" href="login.html">Login</a>
-    </div>
-
-    <button class="hamburger-btn" id="menuToggle" aria-label="Toggle navigation menu" title="Navigation Menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-  </header>
-
-  <div class="notification-marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="7">
-      <span class="marquee-text">Welcome to SUTRAM 2026 &mdash; The Premier AI-Powered Cyber Investigation &amp; Digital Forensics <span class="highlight">HACKATHON</span>! Get ready to innovate, investigate, and inspire justice!</span>
-    </marquee>
-  </div>
-
-  <nav class="primary-nav" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a class="active" href="problem-statements.html">Problem Statements</a>
-    <a href="participation.html">Participation</a>
-    <a href="registration.html">Registration</a>
-    <a href="submission.html">Project Submission</a>
-    <a href="journey.html">Hackathon Journey</a>
-    <a href="prizes.html">Prizes</a>
-    <a href="evaluation.html">Evaluation</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
-
-
-<!-- MAIN -->
-
-<main class="problem-main">
-
-  <section class="problem-hero">
-
-    <div class="section-tag">
-      <span></span>
-      SUTRAM 2026 • CHALLENGE ARENA
-    </div>
-
-    <h1>
-      Choose a problem.<br>
-      <span>Build the solution.</span>
-    </h1>
-
-    <p>
-      Explore real-world challenges in Cyber Investigation and
-      Digital Forensics. Choose a challenge and transform your
-      ideas into impactful solutions.
-    </p>
-
-  </section>
-
-
-  <!-- SEARCH + FILTER -->
-
-  <section class="problem-controls">
-
-    <div class="search-box">
-
-      <span class="search-icon">⌕</span>
-
-      <input type="text"
-             id="searchInput"
-             placeholder="Search problem statements...">
-
-    </div>
-
-
-    <div class="filter-section">
-
-      <button class="filter-btn active-filter" data-filter="all">
-        All Problems
-      </button>
-
-      <button class="filter-btn" data-filter="ai">
-        AI & ML
-      </button>
-
-      <button class="filter-btn" data-filter="cyber">
-        Cyber Security
-      </button>
-
-      <button class="filter-btn" data-filter="forensics">
-        Digital Forensics
-      </button>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROBLEM CARDS -->
-
-  <section class="problem-grid">
-
-    <div class="problem-card" data-category="ai">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-01</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>AI-Based Digital Evidence Analysis</h3>
-
-      <p>
-        Develop an intelligent system capable of analysing
-        large volumes of digital evidence efficiently.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag ai-tag">
-                        AI & ML
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-01',
-                        'AI-Based Digital Evidence Analysis',
-                        'AI & ML',
-                        'Develop an intelligent system capable of analysing large volumes of digital evidence efficiently and identifying meaningful patterns.',
-                        'Build an AI-powered solution that assists investigators in processing, organising and analysing digital evidence.',
-                        'A scalable and accurate platform that can help reduce manual effort during digital investigations.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="problem-card" data-category="cyber">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-02</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>Intelligent Cyber Threat Detection</h3>
-
-      <p>
-        Create a system capable of detecting suspicious
-        activities and identifying potential cyber threats.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag cyber-tag">
-                        Cyber Security
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-02',
-                        'Intelligent Cyber Threat Detection',
-                        'Cyber Security',
-                        'Create a system capable of detecting suspicious activities and identifying potential cyber threats from available digital data.',
-                        'Develop an intelligent threat detection mechanism that identifies unusual patterns and generates useful alerts.',
-                        'A reliable system that helps investigators identify and respond to cyber threats faster.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="problem-card" data-category="forensics">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-03</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>Deepfake Detection & Verification</h3>
-
-      <p>
-        Develop a solution for identifying manipulated
-        images, videos and synthetic digital content.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag forensic-tag">
-                        Digital Forensics
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-03',
-                        'Deepfake Detection & Verification',
-                        'Digital Forensics',
-                        'Develop a solution for identifying manipulated images, videos and other forms of synthetic digital content.',
-                        'Build a system capable of analysing digital media and detecting possible manipulation or AI-generated content.',
-                        'An efficient verification tool that assists in maintaining authenticity and trust in digital evidence.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="problem-card" data-category="forensics">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-04</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>Automated Incident Investigation</h3>
-
-      <p>
-        Design a system that assists investigators in
-        organising and analysing cyber incident information.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag forensic-tag">
-                        Digital Forensics
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-04',
-                        'Automated Incident Investigation',
-                        'Digital Forensics',
-                        'Design a system that assists investigators in organising and analysing information collected during a cyber incident.',
-                        'Create a workflow that helps investigators understand incidents faster using structured data analysis.',
-                        'A streamlined investigation process with improved efficiency.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="problem-card" data-category="ai">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-05</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>AI-Powered Investigation Assistant</h3>
-
-      <p>
-        Build an intelligent assistant that helps
-        investigators retrieve and understand information.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag ai-tag">
-                        AI & ML
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-05',
-                        'AI-Powered Investigation Assistant',
-                        'AI & ML',
-                        'Build an intelligent assistant that helps investigators retrieve, organise and understand relevant information during investigations.',
-                        'Develop a secure AI-powered interface that provides meaningful assistance.',
-                        'A useful investigation assistant that improves productivity.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="problem-card" data-category="cyber">
-
-      <div class="card-top">
-        <span class="problem-id">SUTRAM-PS-06</span>
-        <span class="status-badge">OPEN</span>
-      </div>
-
-      <div class="card-line"></div>
-
-      <h3>Secure Digital Identity Protection</h3>
-
-      <p>
-        Create an innovative solution for protecting
-        digital identities against misuse and compromise.
-      </p>
-
-      <div class="card-bottom">
-
-                    <span class="category-tag cyber-tag">
-                        Cyber Security
-                    </span>
-
-        <button class="view-btn"
-                onclick="openModal(
-                        'SUTRAM-PS-06',
-                        'Secure Digital Identity Protection',
-                        'Cyber Security',
-                        'Create an innovative solution for protecting digital identities against misuse, theft and unauthorised access.',
-                        'Develop a secure and user-friendly approach for improving digital identity protection.',
-                        'A scalable security solution that protects sensitive identity information.'
-                        )">
-
-          View Details ↗
-
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PAGINATION -->
-
-  <div class="pagination">
-
-    <button class="page-arrow">←</button>
-
-    <button class="page-number active-page">1</button>
-
-    <button class="page-number">2</button>
-
-    <button class="page-number">3</button>
-
-    <button class="page-arrow">→</button>
-
-  </div>
-
-</main>
-
-
-<!-- MODAL -->
-
-<div class="modal-overlay" id="problemModal">
-
-  <div class="problem-modal">
-
-    <button class="close-modal" onclick="closeModal()">
-      ×
-    </button>
-
-    <div class="modal-top">
-
-      <span id="modalId"></span>
-
-      <span class="modal-status">
-                    OPEN
-                </span>
-
-    </div>
-
-    <div class="modal-line"></div>
-
-    <h2 id="modalTitle"></h2>
-
-    <div class="modal-category"
-         id="modalCategory">
-    </div>
-
-
-    <div class="modal-content-block">
-
-      <h4>PROBLEM DESCRIPTION</h4>
-
-      <p id="modalDescription"></p>
-
-    </div>
-
-
-    <div class="modal-content-block">
-
-      <h4>OBJECTIVE</h4>
-
-      <p id="modalObjective"></p>
-
-    </div>
-
-
-    <div class="modal-content-block">
-
-      <h4>EXPECTED OUTCOME</h4>
-
-      <p id="modalOutcome"></p>
-
-    </div>
-
-
-    <div class="modal-actions">
-
-      <button class="modal-back"
-              onclick="closeModal()">
-
-        ← Back
-
-      </button>
-
-
-      <a href="registration.html"
-         class="modal-register">
-
-        Register Now ↗
-
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-  <footer class="page-footer">
-    <div class="footer-container">
-      <section class="footer-col">
-        <h2>Follow Us</h2>
-        <div class="social-buttons">
-          <a href="https://www.instagram.com/sutram_2026?igsh=MTRsaG00M3dqNG5oaA==" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            Instagram
-          </a>
-          <a href="https://chat.whatsapp.com/GdZ1pulNiuoJmmW5uX4iJ7?s=sh&p=a&ilr=0" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            WhatsApp
-          </a>
-          <a href="https://t.me/sutram2026" class="social-btn" target="_blank" rel="noopener" aria-label="Telegram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            Telegram
+<body>
+  <div class="page ps-page">
+    <main class="announcement">
+
+      <!-- HEADER: kept consistent with the current SUTRAM homepage -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <a href="index.html" aria-label="IGDTUW home">
+            <img class="igdtuw-image" src="igdtuw-logo.473df1c6cbcd03a6bf01.png" alt="IGDTUW logo" />
           </a>
         </div>
-      </section>
 
-      <section class="footer-col" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-list">
-          <a href="mailto:isea@igdtuw.ac.in" class="contact-link-item">
-            <span class="contact-icon-badge">📧</span>
-            <span>isea@igdtuw.ac.in</span>
-          </a>
-          <div class="contact-link-item">
-            <span class="contact-icon-badge">🏛</span>
-            <span>Indira Gandhi Delhi Technical University for Women, Delhi – 110006, India</span>
+        <a class="topbar-center-logo" href="index.html" aria-label="SUTRAM 2026 home">
+          <img src="sutram_exact_full_logo.png" alt="SUTRAM 2026" />
+        </a>
+
+        <div class="topbar-right">
+          <img class="logo-image" src="Emblem_of_India_with_transparent_background.png" alt="Government of India emblem" />
+          <img class="isea-image" src="isea_logo.png" alt="ISEA logo" />
+          <a class="login-btn" href="login.html">Login</a>
+        </div>
+
+        <button class="hamburger-btn" id="menuToggle" aria-label="Toggle navigation menu" title="Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </header>
+
+      <!-- ANNOUNCEMENT -->
+      <div class="notification-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="7">
+          <span class="marquee-text">
+            Welcome to SUTRAM 2026 — The Premier AI-Powered Cyber Investigation &amp; Digital Forensics
+            <span class="highlight">HACKATHON</span>! Get ready to innovate, investigate, and inspire justice!
+          </span>
+        </marquee>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="problem-statements.html">Problem Statements</a>
+        <a href="participation.html">Participation</a>
+        <a href="registration.html">Registration</a>
+        <a href="submission.html">Project Submission</a>
+        <a href="journey.html">Hackathon Journey</a>
+        <a href="prizes.html">Prizes</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <!-- PAGE HERO -->
+      <section class="ps-hero">
+        <div class="ps-orbit ps-orbit-one"></div>
+        <div class="ps-orbit ps-orbit-two"></div>
+        <div class="ps-grid"></div>
+
+        <div class="ps-hero-content">
+          <span class="ps-eyebrow">SUTRAM 2026</span>
+          <h1>Problem <span>Statements</span></h1>
+          <p>
+            Explore the challenges at the heart of SUTRAM 2026 and build solutions
+            where artificial intelligence meets digital investigation.
+          </p>
+          <div class="ps-line">
+            <span></span>
+            <small>WHERE EVERY TRACE CONNECTS</small>
+            <span></span>
           </div>
         </div>
       </section>
-    </div>
 
-    <div class="footer-bottom-bar">
-      <span>&copy; 2026 SUTRAM &middot; IGDTUW</span>
-      <span>Ministry of Electronics &amp; Information Technology (MeitY) &middot; Government of India</span>
-    </div>
-  </footer>
+      <!-- PROBLEM CARDS -->
+      <section class="ps-section">
+        <div class="ps-section-heading">
+          <div>
+            <span class="section-kicker">THE CHALLENGES</span>
+            <h2>Choose your <span>challenge.</span></h2>
+          </div>
+          <p class="ps-intro-text">
+            Five problem statements. <span>One opportunity</span> to turn investigation
+            challenges into meaningful technology.
+</p>
+        </div>
 
-  <!-- Slide-Out Navigation Drawer -->
+        <div class="problem-grid">
+
+          <article class="problem-card">
+            <div class="card-top">
+              <span class="problem-number">PS01</span>
+              <span class="card-icon">⌁</span>
+            </div>
+            <div class="card-graphic">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="trace"></span>
+            </div>
+            <h3>AI-Assisted Mobile Evidence Intelligence</h3>
+            <div class="card-footer">
+              <span>Problem Statement 01</span>
+              <span class="status">Details to be announced</span>
+            </div>
+          </article>
+
+          <article class="problem-card">
+            <div class="card-top">
+              <span class="problem-number">PS02</span>
+              <span class="card-icon">◈</span>
+            </div>
+            <div class="card-graphic">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="trace"></span>
+            </div>
+            <h3>Multimedia Evidence Authentication &amp; Deepfake Detection</h3>
+            <div class="card-footer">
+              <span>Problem Statement 02</span>
+              <span class="status">Details to be announced</span>
+            </div>
+          </article>
+
+          <article class="problem-card">
+            <div class="card-top">
+              <span class="problem-number">PS03</span>
+              <span class="card-icon">⌘</span>
+            </div>
+            <div class="card-graphic">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="trace"></span>
+            </div>
+            <h3>Digital Evidence Correlation &amp; Crime Reconstruction</h3>
+            <div class="card-footer">
+              <span>Problem Statement 03</span>
+              <span class="status">Details to be announced</span>
+            </div>
+          </article>
+
+          <article class="problem-card">
+            <div class="card-top">
+              <span class="problem-number">PS04</span>
+              <span class="card-icon">⌬</span>
+            </div>
+            <div class="card-graphic">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="trace"></span>
+            </div>
+            <h3>AI-Powered Cyber Fraud Investigation &amp; Attribution</h3>
+            <div class="card-footer">
+              <span>Problem Statement 04</span>
+              <span class="status">Details to be announced</span>
+            </div>
+          </article>
+
+          <article class="problem-card problem-card-wide">
+            <div class="card-top">
+              <span class="problem-number">PS05</span>
+              <span class="card-icon">◎</span>
+            </div>
+            <div class="card-graphic">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="trace"></span>
+            </div>
+            <h3>AI-Powered Digital Investigation Assistant</h3>
+            <div class="card-footer">
+              <span>Problem Statement 05</span>
+              <span class="status">Details to be announced</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="ps-cta">
+        <div class="cta-decoration"></div>
+        <div>
+          <span class="section-kicker">READY TO BUILD?</span>
+          <h2>Turn the challenge into <span>impact.</span></h2>
+        </div>
+        <a class="ps-register-btn" href="registration.html">
+          Register Now <span>↗</span>
+        </a>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <div class="footer-container">
+          <section class="footer-col">
+            <h2>Follow Us</h2>
+            <div class="social-buttons">
+              <a href="https://www.instagram.com/sutram_2026" class="social-btn" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://t.me/sutram2026" class="social-btn" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </section>
+
+          <section class="footer-col" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-list">
+              <a href="mailto:isea@igdtuw.ac.in" class="contact-link-item">
+                <span class="contact-icon-badge">✉</span>
+                <span>isea@igdtuw.ac.in</span>
+              </a>
+              <div class="contact-link-item">
+                <span class="contact-icon-badge">⌖</span>
+                <span>Indira Gandhi Delhi Technical University for Women, Delhi – 110006, India</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <span>&copy; 2026 SUTRAM · IGDTUW</span>
+          <span>Ministry of Electronics &amp; Information Technology (MeitY) · Government of India</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- SLIDE-OUT MENU -->
   <div class="nav-drawer" id="navDrawer">
     <div class="drawer-header">
       <span class="drawer-title">SUTRAM 2026</span>
@@ -528,7 +251,7 @@
     <ul class="drawer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="active" href="problem-statements.html">Problem Statements</a></li>
+      <li><a href="problem-statements.html">Problem Statements</a></li>
       <li><a href="participation.html">Participation</a></li>
       <li><a href="registration.html">Registration</a></li>
       <li><a href="submission.html">Project Submission</a></li>
@@ -537,10 +260,6 @@
       <li><a href="evaluation.html">Evaluation</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="login.html">Login</a></li>
-      <li><a href="https://www.instagram.com/sutram_2026?igsh=MTRsaG00M3dqNG5oaA==" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://chat.whatsapp.com/GdZ1pulNiuoJmmW5uX4iJ7?s=sh&p=a&ilr=0" target="_blank" rel="noopener">WhatsApp Group</a></li>
-      <li><a href="https://t.me/sutram2026" target="_blank" rel="noopener">Telegram Channel</a></li>
-      <li><a href="mailto:isea@igdtuw.ac.in">Contact Email</a></li>
     </ul>
   </div>
   <div class="nav-backdrop" id="navBackdrop"></div>
@@ -561,148 +280,5 @@
     closeDrawer.addEventListener("click", toggleNav);
     navBackdrop.addEventListener("click", toggleNav);
   </script>
-
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-  const searchInput =
-          document.getElementById("searchInput");
-
-  const problemCards =
-          document.querySelectorAll(".problem-card");
-
-
-  searchInput.addEventListener("keyup", function () {
-
-    const searchValue =
-            searchInput.value.toLowerCase();
-
-    problemCards.forEach(function (card) {
-
-      const cardText =
-              card.innerText.toLowerCase();
-
-      if (cardText.includes(searchValue)) {
-
-        card.style.display = "flex";
-
-      } else {
-
-        card.style.display = "none";
-
-      }
-
-    });
-
-  });
-
-
-  const filterButtons =
-          document.querySelectorAll(".filter-btn");
-
-
-  filterButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-      filterButtons.forEach(function (btn) {
-
-        btn.classList.remove("active-filter");
-
-      });
-
-      button.classList.add("active-filter");
-
-      const filter =
-              button.getAttribute("data-filter");
-
-
-      problemCards.forEach(function (card) {
-
-        if (
-                filter === "all" ||
-                card.getAttribute("data-category") === filter
-        ) {
-
-          card.style.display = "flex";
-
-        } else {
-
-          card.style.display = "none";
-
-        }
-
-      });
-
-    });
-
-  });
-
-
-  function openModal(
-          id,
-          title,
-          category,
-          description,
-          objective,
-          outcome
-  ) {
-
-    document.getElementById("modalId").innerText = id;
-
-    document.getElementById("modalTitle").innerText = title;
-
-    document.getElementById("modalCategory").innerText = category;
-
-    document.getElementById("modalDescription").innerText =
-            description;
-
-    document.getElementById("modalObjective").innerText =
-            objective;
-
-    document.getElementById("modalOutcome").innerText =
-            outcome;
-
-
-    document
-            .getElementById("problemModal")
-            .classList.add("show-modal");
-
-
-    document.body.style.overflow = "hidden";
-
-  }
-
-
-  function closeModal() {
-
-    document
-            .getElementById("problemModal")
-            .classList.remove("show-modal");
-
-
-    document.body.style.overflow = "auto";
-
-  }
-
-
-  window.addEventListener("click", function (event) {
-
-    const modal =
-            document.getElementById("problemModal");
-
-    if (event.target === modal) {
-
-      closeModal();
-
-    }
-
-  });
-
-</script>
-
 </body>
-
 </html>
