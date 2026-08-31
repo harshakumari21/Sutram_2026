@@ -47,13 +47,49 @@
 
   <nav class="primary-nav" aria-label="Primary navigation">
     <a href="index.html">Home</a>
-    <a class="active" href="about.html">About</a>
-    <a href="problem-statements.html">Problem Statements</a>
-    <a href="participation.html">Participation</a>
-    <a href="registration.html">Registration</a>
-    <a href="submission.html">Project Submission</a>
-    <a href="journey.html">Hackathon Journey</a>
-    <a href="prizes.html">Prizes</a>
+
+    <div class="nav-item">
+      <button class="nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">About <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a class="active" href="about.html">About SUTRAM</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Compete <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a href="problem-statements.html">Problem Statements</a>
+        <a href="participation.html">Participation</a>
+        <a href="journey.html">Hackathon Journey</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Timeline <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu nav-timeline-menu" data-timeline-panel>
+        <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-09-10"><span class="nav-timeline-label">Registration Opens</span><span class="nav-timeline-value" data-date="2026-08-20">20 Aug 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-09-10"><span class="nav-timeline-label">Registration Closes</span><span class="nav-timeline-value" data-date="2026-09-10">10 Sep 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="2" data-roll-date="2026-09-12"><span class="nav-timeline-label">Problem Statement Release</span><span class="nav-timeline-value" data-date="2026-09-12">12 Sep 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="3" data-roll-date="2026-09-22"><span class="nav-timeline-label">Idea / Proposal Submission</span><span class="nav-timeline-value" data-date="2026-09-22">22 Sep 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="4" data-roll-date="2026-09-28"><span class="nav-timeline-label">Shortlisting</span><span class="nav-timeline-value" data-date="2026-09-28">28 Sep 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="5" data-roll-date="2026-10-10"><span class="nav-timeline-label">Mentorship</span><span class="nav-timeline-value" data-date="2026-10-10">10 Oct 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="6" data-roll-date="2026-10-18"><span class="nav-timeline-label">Prototype / PPT Submission</span><span class="nav-timeline-value" data-date="2026-10-18">18 Oct 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-10-28"><span class="nav-timeline-label">Grand Finale</span><span class="nav-timeline-value" data-date="2026-10-25">25 Oct 2026</span></div>
+        <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-10-28"><span class="nav-timeline-label">Winner Announcement</span><span class="nav-timeline-value" data-date="2026-10-28">28 Oct 2026</span></div>
+        <p class="nav-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</p>
+        <div class="nav-dropdown-divider"></div>
+        <a class="nav-dropdown-link" href="timeline.html">View Full Timeline ↗</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Submit <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a href="registration.html">Registration</a>
+        <a href="submission.html">Project Submission</a>
+      </div>
+    </div>
+
     <a href="evaluation.html">Evaluation</a>
     <a href="faq.html">FAQ</a>
   </nav>
@@ -646,7 +682,7 @@
 
             <div class="final-cta-buttons">
 
-                <a href="problems.html"
+                <a href="problem-statements.html"
                    class="about-btn about-btn-outline">
 
                     View Problem Statements
@@ -722,13 +758,48 @@
     </div>
     <ul class="drawer-links">
       <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="about.html">About</a></li>
-      <li><a href="problem-statements.html">Problem Statements</a></li>
-      <li><a href="participation.html">Participation</a></li>
-      <li><a href="registration.html">Registration</a></li>
-      <li><a href="submission.html">Project Submission</a></li>
-      <li><a href="journey.html">Hackathon Journey</a></li>
-      <li><a href="prizes.html">Prizes</a></li>
+
+      <li class="drawer-group open">
+        <button class="drawer-group-toggle" aria-expanded="true">About <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li><a class="active" href="about.html">About SUTRAM</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
+        <button class="drawer-group-toggle" aria-expanded="false">Compete <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li><a href="problem-statements.html">Problem Statements</a></li>
+          <li><a href="participation.html">Participation</a></li>
+          <li><a href="journey.html">Hackathon Journey</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
+        <button class="drawer-group-toggle" aria-expanded="false">Timeline <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist" data-timeline-panel>
+          <li class="drawer-timeline-row" data-timeline-group="1" data-roll-date="2026-09-10"><span class="drawer-timeline-label">Registration Opens</span><span class="drawer-timeline-value" data-date="2026-08-20">20 Aug 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="1" data-roll-date="2026-09-10"><span class="drawer-timeline-label">Registration Closes</span><span class="drawer-timeline-value" data-date="2026-09-10">10 Sep 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="2" data-roll-date="2026-09-12"><span class="drawer-timeline-label">Problem Statement Release</span><span class="drawer-timeline-value" data-date="2026-09-12">12 Sep 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="3" data-roll-date="2026-09-22"><span class="drawer-timeline-label">Idea / Proposal Submission</span><span class="drawer-timeline-value" data-date="2026-09-22">22 Sep 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="4" data-roll-date="2026-09-28"><span class="drawer-timeline-label">Shortlisting</span><span class="drawer-timeline-value" data-date="2026-09-28">28 Sep 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="5" data-roll-date="2026-10-10"><span class="drawer-timeline-label">Mentorship</span><span class="drawer-timeline-value" data-date="2026-10-10">10 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="6" data-roll-date="2026-10-18"><span class="drawer-timeline-label">Prototype / PPT Submission</span><span class="drawer-timeline-value" data-date="2026-10-18">18 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="7" data-roll-date="2026-10-28"><span class="drawer-timeline-label">Grand Finale</span><span class="drawer-timeline-value" data-date="2026-10-25">25 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="7" data-roll-date="2026-10-28"><span class="drawer-timeline-label">Winner Announcement</span><span class="drawer-timeline-value" data-date="2026-10-28">28 Oct 2026</span></li>
+          <li class="drawer-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</li>
+          <li><a href="timeline.html">View Full Timeline ↗</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
+        <button class="drawer-group-toggle" aria-expanded="false">Submit <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="submission.html">Project Submission</a></li>
+        </ul>
+      </li>
+
       <li><a href="evaluation.html">Evaluation</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="login.html">Login</a></li>

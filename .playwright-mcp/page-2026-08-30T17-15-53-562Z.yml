@@ -1,0 +1,265 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "IGDTUW home" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+      - img "IGDTUW logo" [ref=e5]
+    - link "SUTRAM 2026 home" [ref=e6] [cursor=pointer]:
+      - /url: index.html
+      - img "SUTRAM 2026" [ref=e7]
+    - generic [ref=e8]:
+      - img "Government of India emblem" [ref=e9]
+      - img "ISEA logo" [ref=e10]
+      - link "Login" [ref=e11] [cursor=pointer]:
+        - /url: login.html
+    - button "Toggle navigation menu" [ref=e12] [cursor=pointer]
+  - generic [ref=e16]: Welcome to SUTRAM 2026 — The Premier AI-Powered Cyber Investigation & Digital Forensics HACKATHON! Get ready to innovate, investigate, and inspire justice!
+  - navigation "Primary navigation" [ref=e19]:
+    - link "Home" [ref=e20] [cursor=pointer]:
+      - /url: index.html
+    - button "About ▾" [ref=e22] [cursor=pointer]:
+      - text: About
+      - generic [ref=e23]: ▾
+    - button "Compete ▾" [ref=e25] [cursor=pointer]:
+      - text: Compete
+      - generic [ref=e26]: ▾
+    - button "Timeline ▾" [ref=e28] [cursor=pointer]:
+      - text: Timeline
+      - generic [ref=e29]: ▾
+    - button "Submit ▾" [ref=e31] [cursor=pointer]:
+      - text: Submit
+      - generic [ref=e32]: ▾
+    - link "Prizes" [ref=e33] [cursor=pointer]:
+      - /url: prizes.html
+    - link "Evaluation" [ref=e34] [cursor=pointer]:
+      - /url: evaluation.html
+    - link "FAQ" [ref=e35] [cursor=pointer]:
+      - /url: faq.html
+  - main [ref=e36]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: ABOUT SUTRAM 2026
+      - heading "Where Innovation Meets Investigation." [level=1] [ref=e40]
+      - paragraph [ref=e41]: SUTRAM 2026 is an AI-powered Cyber Investigation and Digital Forensics Hackathon that brings together innovators, students, researchers and technology enthusiasts to solve real-world digital investigation challenges.
+      - generic [ref=e42]: Explore the Hackathon
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]: "01"
+        - generic [ref=e48]: THE INITIATIVE
+        - heading "What is SUTRAM?" [level=2] [ref=e49]
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: SUTRAM is a national platform focused on exploring how Artificial Intelligence can strengthen digital investigation, cyber forensics and incident response.
+        - paragraph [ref=e52]: The hackathon encourages participants to think beyond conventional solutions and develop practical, scalable and technology-driven approaches for challenges in the evolving digital ecosystem.
+        - paragraph [ref=e53]: From intelligent evidence analysis to cyber incident response, participants will have the opportunity to transform innovative ideas into meaningful solutions.
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: OUR PURPOSE
+        - heading "Built for the future of digital justice." [level=2] [ref=e58]
+      - generic [ref=e59]:
+        - article [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: "01"
+            - generic [ref=e63]: ◉
+          - heading "Our Vision" [level=3] [ref=e64]
+          - paragraph [ref=e65]: To create a collaborative innovation ecosystem where Artificial Intelligence and emerging technologies can help strengthen digital investigation, cyber forensics and incident response.
+        - article [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: "02"
+            - generic [ref=e69]: ✦
+          - heading "Innovate" [level=3] [ref=e70]
+          - paragraph [ref=e71]: Encourage participants to develop creative solutions for real-world challenges in cyber investigation and digital forensics.
+        - article [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: "03"
+            - generic [ref=e75]: ↗
+          - heading "Collaborate" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Bring together students, researchers, professionals and mentors to exchange ideas and build impactful solutions.
+        - article [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: "04"
+            - generic [ref=e81]: ◆
+          - heading "Build Impact" [level=3] [ref=e82]
+          - paragraph [ref=e83]: Transform promising ideas into prototypes and solutions with practical relevance and future scalability.
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]: "02"
+          - generic [ref=e89]: FOCUS AREAS
+        - heading "Powered by emerging technology." [level=2] [ref=e90]
+      - generic [ref=e91]:
+        - article [ref=e92]:
+          - text: "01"
+          - generic [ref=e93]: AI
+          - heading "Artificial Intelligence" [level=3] [ref=e94]
+          - paragraph [ref=e95]: Intelligent systems for evidence analysis, pattern recognition, automation and decision support.
+        - article [ref=e96]:
+          - text: "02"
+          - generic [ref=e97]: MF
+          - heading "Mobile Forensics" [level=3] [ref=e98]
+          - paragraph [ref=e99]: Innovative approaches for analysing and investigating digital evidence from mobile devices.
+        - article [ref=e100]:
+          - text: "03"
+          - generic [ref=e101]: CF
+          - heading "Cyber Forensics" [level=3] [ref=e102]
+          - paragraph [ref=e103]: Technologies and methodologies for identifying, analysing and understanding digital traces.
+        - article [ref=e104]:
+          - text: "04"
+          - generic [ref=e105]: IR
+          - heading "Incident Response" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Faster and smarter approaches for detecting, analysing and responding to cyber incidents.
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e111]: THE JOURNEY OF AN IDEA
+        - heading "From an idea to real-world impact." [level=2] [ref=e112]
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: "01"
+          - strong [ref=e116]: IDEA
+          - paragraph [ref=e117]: Identify the challenge
+        - generic [ref=e119]:
+          - generic [ref=e120]: "02"
+          - strong [ref=e121]: PoC
+          - paragraph [ref=e122]: Validate the concept
+        - generic [ref=e124]:
+          - generic [ref=e125]: "03"
+          - strong [ref=e126]: MVP
+          - paragraph [ref=e127]: Build the solution
+        - generic [ref=e129]:
+          - generic [ref=e130]: "04"
+          - strong [ref=e131]: PROTOTYPE
+          - paragraph [ref=e132]: Demonstrate impact
+        - generic [ref=e134]:
+          - generic [ref=e135]: "05"
+          - strong [ref=e136]: ADOPTION
+          - paragraph [ref=e137]: Enable the future
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]: ORGANISING INSTITUTIONS
+        - heading "Driving innovation together." [level=2] [ref=e142]
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - img "ISEA Logo" [ref=e145]
+          - heading "ISEA" [level=3] [ref=e146]
+          - paragraph [ref=e147]: Information Security Education and Awareness initiative.
+        - generic [ref=e148]:
+          - img "Government of India" [ref=e149]
+          - heading "MeitY" [level=3] [ref=e150]
+          - paragraph [ref=e151]: Ministry of Electronics and Information Technology, Government of India.
+        - generic [ref=e152]:
+          - img "IGDTUW Logo" [ref=e153]
+          - heading "IGDTUW" [level=3] [ref=e154]
+          - paragraph [ref=e155]: Indira Gandhi Delhi Technical University for Women.
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]: READY TO PARTICIPATE?
+        - heading "Bring your idea. Build the future." [level=2] [ref=e160]
+      - generic [ref=e161]:
+        - link "View Problem Statements ↗" [ref=e162] [cursor=pointer]:
+          - /url: problem-statements.html
+          - text: View Problem Statements
+          - generic [ref=e163]: ↗
+        - link "Register Now ↗" [ref=e164] [cursor=pointer]:
+          - /url: registration.html
+          - text: Register Now
+          - generic [ref=e165]: ↗
+  - contentinfo [ref=e166]:
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - heading "Follow Us" [level=2] [ref=e169]
+        - generic [ref=e170]:
+          - link "Instagram" [ref=e171] [cursor=pointer]:
+            - /url: https://www.instagram.com/sutram_2026?igsh=MTRsaG00M3dqNG5oaA==
+          - link "WhatsApp" [ref=e175] [cursor=pointer]:
+            - /url: https://chat.whatsapp.com/GdZ1pulNiuoJmmW5uX4iJ7?s=sh&p=a&ilr=0
+          - link "Telegram" [ref=e178] [cursor=pointer]:
+            - /url: https://t.me/sutram2026
+      - generic [ref=e182]:
+        - heading "Contact Us" [level=2] [ref=e183]
+        - generic [ref=e184]:
+          - link "📧 isea@igdtuw.ac.in" [ref=e185] [cursor=pointer]:
+            - /url: mailto:isea@igdtuw.ac.in
+            - generic [ref=e186]: 📧
+            - generic [ref=e187]: isea@igdtuw.ac.in
+          - generic [ref=e188]:
+            - generic [ref=e189]: 🏛
+            - generic [ref=e190]: Indira Gandhi Delhi Technical University for Women, Delhi – 110006, India
+    - generic [ref=e191]:
+      - generic [ref=e192]: © 2026 SUTRAM · IGDTUW
+      - generic [ref=e193]: Ministry of Electronics & Information Technology (MeitY) · Government of India
+  - generic [ref=e194]:
+    - generic [ref=e195]:
+      - generic [ref=e196]: SUTRAM 2026
+      - button "Close menu" [ref=e197] [cursor=pointer]: ×
+    - list [ref=e198]:
+      - listitem [ref=e199]:
+        - link "Home" [ref=e200] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=e201]:
+        - button "About ▾" [expanded] [ref=e202] [cursor=pointer]:
+          - text: About
+          - generic [ref=e203]: ▾
+        - list [ref=e204]:
+          - listitem [ref=e205]:
+            - link "About SUTRAM" [ref=e206] [cursor=pointer]:
+              - /url: about.html
+      - listitem [ref=e207]:
+        - button "Compete ▾" [ref=e208] [cursor=pointer]:
+          - text: Compete
+          - generic [ref=e209]: ▾
+        - list:
+          - listitem [ref=e210]:
+            - link "Problem Statements" [ref=e211] [cursor=pointer]:
+              - /url: problem-statements.html
+          - listitem [ref=e212]:
+            - link "Participation" [ref=e213] [cursor=pointer]:
+              - /url: participation.html
+          - listitem [ref=e214]:
+            - link "Hackathon Journey" [ref=e215] [cursor=pointer]:
+              - /url: journey.html
+      - listitem [ref=e216]:
+        - button "Timeline ▾" [ref=e217] [cursor=pointer]:
+          - text: Timeline
+          - generic [ref=e218]: ▾
+        - list:
+          - listitem [ref=e219]:
+            - generic [ref=e220]: Registration Opens
+            - generic [ref=e221]: 20 Aug 2026
+          - listitem [ref=e222]:
+            - generic [ref=e223]: Registration Closes
+            - generic [ref=e224]: 10 Sep 2026
+          - listitem [ref=e225]:
+            - link "View Full Timeline ↗" [ref=e226] [cursor=pointer]:
+              - /url: timeline.html
+      - listitem [ref=e227]:
+        - button "Submit ▾" [ref=e228] [cursor=pointer]:
+          - text: Submit
+          - generic [ref=e229]: ▾
+        - list:
+          - listitem [ref=e230]:
+            - link "Registration" [ref=e231] [cursor=pointer]:
+              - /url: registration.html
+          - listitem [ref=e232]:
+            - link "Project Submission" [ref=e233] [cursor=pointer]:
+              - /url: submission.html
+      - listitem [ref=e234]:
+        - link "Prizes" [ref=e235] [cursor=pointer]:
+          - /url: prizes.html
+      - listitem [ref=e236]:
+        - link "Evaluation" [ref=e237] [cursor=pointer]:
+          - /url: evaluation.html
+      - listitem [ref=e238]:
+        - link "FAQ" [ref=e239] [cursor=pointer]:
+          - /url: faq.html
+      - listitem [ref=e240]:
+        - link "Login" [ref=e241] [cursor=pointer]:
+          - /url: login.html
+      - listitem [ref=e242]:
+        - link "Instagram" [ref=e243] [cursor=pointer]:
+          - /url: https://www.instagram.com/sutram_2026?igsh=MTRsaG00M3dqNG5oaA==
+      - listitem [ref=e244]:
+        - link "WhatsApp Group" [ref=e245] [cursor=pointer]:
+          - /url: https://chat.whatsapp.com/GdZ1pulNiuoJmmW5uX4iJ7?s=sh&p=a&ilr=0
+      - listitem [ref=e246]:
+        - link "Telegram Channel" [ref=e247] [cursor=pointer]:
+          - /url: https://t.me/sutram2026
+      - listitem [ref=e248]:
+        - link "Contact Email" [ref=e249] [cursor=pointer]:
+          - /url: mailto:isea@igdtuw.ac.in
