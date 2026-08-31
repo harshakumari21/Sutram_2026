@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const REVEALED = { label: "Grand Prize Pool", value: "₹2.5 Lakh", icon: "🎉" };
     const confettiColors = ["#0077b6", "#00b4d8", "#f5b400", "#fdb931", "#ff6b6b", "#2575fc"];
-    const AUTO_CLOSE_MS = 3000;
+    const AUTO_CLOSE_MS = 7000;
     let autoCloseTimer = null;
 
     function spawnConfetti() {

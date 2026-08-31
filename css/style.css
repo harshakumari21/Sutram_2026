@@ -7869,7 +7869,7 @@ body.error-page {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: min(480px, 100%);
+  width: min(560px, 100%);
   padding: 56px 32px 44px;
   border-radius: 24px;
   text-align: center;
@@ -7983,4 +7983,102 @@ body.error-page {
 
 @media (max-width: 480px) {
   .prize-overlay-panel { padding: 48px 22px 36px; }
+}
+
+/* Prize breakdown inside the reveal panel (First / Second / Third) */
+
+.prize-overlay-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 6px 0 4px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(253, 185, 49, 0.22);
+}
+
+.prize-overlay-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 14px 8px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+}
+
+/* Tiers fan in one after another once the panel is open. */
+.prize-overlay.open .prize-overlay-tier {
+  animation: prize-tier-rise 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.prize-overlay.open .prize-overlay-tier-first  { animation-delay: 0.35s; }
+.prize-overlay.open .prize-overlay-tier-second { animation-delay: 0.47s; }
+.prize-overlay.open .prize-overlay-tier-third  { animation-delay: 0.59s; }
+
+@keyframes prize-tier-rise {
+  0%   { opacity: 0; transform: translateY(14px) scale(0.94); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.prize-overlay-tier-medal {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.prize-overlay-tier-rank {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fc0d2;
+}
+
+.prize-overlay-tier-amount {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(17px, 4.4vw, 21px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #eaf4f9;
+}
+
+.prize-overlay-tier-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8fb2c6;
+}
+
+/* Gold / silver / bronze accents */
+.prize-overlay-tier-first {
+  background: linear-gradient(160deg, rgba(253, 185, 49, 0.22), rgba(253, 185, 49, 0.08));
+  border-color: rgba(253, 185, 49, 0.45);
+  box-shadow: 0 6px 18px rgba(253, 185, 49, 0.18);
+}
+.prize-overlay-tier-first .prize-overlay-tier-medal { font-size: 26px; }
+.prize-overlay-tier-first .prize-overlay-tier-rank  { color: #f0cd8a; }
+.prize-overlay-tier-first .prize-overlay-tier-amount {
+  font-size: clamp(19px, 5vw, 24px);
+  background: linear-gradient(135deg, #ffe27a, #fdb931);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.prize-overlay-tier-first .prize-overlay-tier-tag { color: #e8bd63; }
+
+.prize-overlay-tier-second { border-color: rgba(201, 214, 224, 0.3); }
+.prize-overlay-tier-third  { border-color: rgba(217, 154, 108, 0.32); }
+
+@media (max-width: 480px) {
+  .prize-overlay-tiers { gap: 8px; padding-top: 14px; }
+  .prize-overlay-tier { padding: 11px 4px 10px; border-radius: 11px; }
+  .prize-overlay-tier-tag { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prize-overlay.open .prize-overlay-tier { animation: none; opacity: 1; }
 }
