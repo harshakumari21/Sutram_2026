@@ -8082,3 +8082,980 @@ body.error-page {
 @media (prefers-reduced-motion: reduce) {
   .prize-overlay.open .prize-overlay-tier { animation: none; opacity: 1; }
 }
+
+/* =========================================================
+   SUTRAM 2026 — "HACKATHON" DARK THEME
+   Appended override layer. Everything below re-skins the
+   light/institutional base above it: deep space ground,
+   electric violet + cyan accents, glass cards, mono labels.
+   Remove this whole block to return to the original theme.
+   ========================================================= */
+
+:root[data-theme="dark"]{
+  --hx-bg:        #070a13;
+  --hx-bg-2:      #0c1120;
+  --hx-surface:   rgba(255, 255, 255, 0.045);
+  --hx-surface-2: rgba(255, 255, 255, 0.075);
+  --hx-line:      rgba(148, 163, 214, 0.18);
+  --hx-line-hot:  rgba(124, 92, 255, 0.5);
+  --hx-violet:    #7c5cff;
+  --hx-cyan:      #22d3ee;
+  --hx-lime:      #a3e635;
+  --hx-pink:      #f472b6;
+  --hx-gold:      #fbbf24;
+  --hx-text:      #e9edfb;
+  --hx-dim:       #98a4c8;
+
+  /* Re-point the original tokens so anything using them follows along. */
+  --ink-primary:   #e9edfb;
+  --ink-secondary: #b9c3e0;
+  --ink-muted:     #98a4c8;
+  --accent-blue:   #7c5cff;
+  --accent-cyan:   #22d3ee;
+  --accent-glow:   rgba(124, 92, 255, 0.35);
+  --border-line:   rgba(148, 163, 214, 0.18);
+  --card-bg:       rgba(255, 255, 255, 0.045);
+}
+
+/* ---------- Ground ---------- */
+
+html[data-theme="dark"], [data-theme="dark"] body{
+  background: var(--hx-bg) !important;
+  color: var(--hx-text) !important;
+}
+
+[data-theme="dark"] body{
+  background-image:
+    radial-gradient(circle at 12% 8%,  rgba(124, 92, 255, 0.20) 0%, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(34, 211, 238, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 96%, rgba(244, 114, 182, 0.10) 0%, transparent 46%),
+    linear-gradient(180deg, #070a13 0%, #0a0f1d 50%, #070a13 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Faint circuit grid over the whole page. */
+[data-theme="dark"] body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(124, 92, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 92, 255, 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 78%);
+}
+
+[data-theme="dark"] .page, [data-theme="dark"] .announcement{ position: relative; z-index: 1; background: transparent !important; }
+
+/* Decorative light-theme washes that fight the dark ground. */
+[data-theme="dark"] .faq-grid, [data-theme="dark"] .ps-grid, [data-theme="dark"] .journey-grid, [data-theme="dark"] .subpage-hero-circle, [data-theme="dark"] .ps-orbit, [data-theme="dark"] .journey-orbit{ opacity: 0.35 !important; }
+
+/* ---------- Type ---------- */
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] .about-section h2, [data-theme="dark"] .journey-heading h2, [data-theme="dark"] .faq-hero-content h1, [data-theme="dark"] .ps-hero-content h1, [data-theme="dark"] .subpage-hero-content h1{
+  color: var(--hx-text) !important;
+}
+
+[data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] span, [data-theme="dark"] small, [data-theme="dark"] td, [data-theme="dark"] th, [data-theme="dark"] label{ color: inherit; }
+
+[data-theme="dark"] .message, [data-theme="dark"] .tagline, [data-theme="dark"] .subpage-hero-content p, [data-theme="dark"] .faq-hero-content p, [data-theme="dark"] .ps-intro-text, [data-theme="dark"] .journey-heading p, [data-theme="dark"] .about-section p, [data-theme="dark"] .subpage-section p{
+  color: var(--hx-dim) !important;
+}
+
+/* Accent words inside headings pick up the neon gradient. */
+[data-theme="dark"] h1 span, [data-theme="dark"] h2 span, [data-theme="dark"] .hackathon-highlight, [data-theme="dark"] .journey-heading h2 span, [data-theme="dark"] .journey-stages-title span{
+  background: linear-gradient(120deg, var(--hx-violet), var(--hx-cyan)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Kickers / eyebrows read as terminal labels. */
+[data-theme="dark"] .subpage-eyebrow, [data-theme="dark"] .ps-eyebrow, [data-theme="dark"] .journey-eyebrow, [data-theme="dark"] .journey-kicker, [data-theme="dark"] .section-tag, [data-theme="dark"] .eyebrow, [data-theme="dark"] .faq-kicker{
+  font-family: "Space Grotesk", monospace !important;
+  color: var(--hx-cyan) !important;
+  background: rgba(34, 211, 238, 0.1) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+  border-radius: 999px !important;
+  padding: 5px 14px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+}
+
+[data-theme="dark"] .tagline{
+  font-family: "Space Grotesk", monospace !important;
+  letter-spacing: 0.34em !important;
+  color: var(--hx-cyan) !important;
+}
+
+/* ---------- Top bar / marquee ---------- */
+
+[data-theme="dark"] .topbar{
+  background: rgba(8, 12, 22, 0.82) !important;
+  border-bottom: 1px solid var(--hx-line) !important;
+  backdrop-filter: blur(14px);
+}
+
+/* Partner marks sit on a light plate so they stay legible. */
+[data-theme="dark"] .igdtuw-image, [data-theme="dark"] .logo-image, [data-theme="dark"] .isea-image{
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .login-btn{
+  background: linear-gradient(120deg, var(--hx-violet), var(--hx-cyan)) !important;
+  color: #080d1a !important;
+  border: none !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.4) !important;
+}
+[data-theme="dark"] .login-btn:hover{ box-shadow: 0 10px 28px rgba(124, 92, 255, 0.6) !important; }
+
+[data-theme="dark"] .notification-marquee{
+  background: linear-gradient(90deg, rgba(124, 92, 255, 0.16), rgba(34, 211, 238, 0.12)) !important;
+  border-top: 1px solid var(--hx-line) !important;
+  border-bottom: 1px solid var(--hx-line) !important;
+}
+[data-theme="dark"] .marquee-text{ color: var(--hx-text) !important; font-family: "Space Grotesk", monospace !important; }
+[data-theme="dark"] .marquee-text .highlight{ color: var(--hx-lime) !important; font-weight: 800; }
+
+[data-theme="dark"] .hamburger-btn .bar{ background: var(--hx-cyan) !important; }
+
+/* ---------- Primary nav + dropdowns ---------- */
+
+[data-theme="dark"] .primary-nav{
+  background: rgba(10, 15, 28, 0.75) !important;
+  border-bottom: 1px solid var(--hx-line) !important;
+}
+
+[data-theme="dark"] .primary-nav > a, [data-theme="dark"] .nav-dropdown-toggle{
+  color: var(--hx-dim) !important;
+  font-family: "Space Grotesk", monospace !important;
+  letter-spacing: 0.04em;
+  background: transparent !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .primary-nav > a:hover, [data-theme="dark"] .nav-dropdown-toggle:hover, [data-theme="dark"] .primary-nav > a.active{
+  color: var(--hx-cyan) !important;
+}
+
+[data-theme="dark"] .primary-nav > a.active{ text-shadow: 0 0 18px rgba(34, 211, 238, 0.6); }
+
+[data-theme="dark"] .nav-dropdown-menu{
+  background: rgba(11, 16, 30, 0.97) !important;
+  border: 1px solid var(--hx-line-hot) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 92, 255, 0.1) !important;
+  backdrop-filter: blur(18px);
+}
+
+[data-theme="dark"] .nav-dropdown-menu a, [data-theme="dark"] .nav-dropdown-link{
+  color: var(--hx-dim) !important;
+  border-radius: 8px;
+}
+[data-theme="dark"] .nav-dropdown-menu a:hover, [data-theme="dark"] .nav-dropdown-link:hover{
+  background: rgba(124, 92, 255, 0.16) !important;
+  color: var(--hx-text) !important;
+}
+[data-theme="dark"] .nav-dropdown-menu a.active{ color: var(--hx-cyan) !important; }
+
+[data-theme="dark"] .nav-dropdown-divider{ background: var(--hx-line) !important; }
+[data-theme="dark"] .nav-timeline-row{ border-bottom: 1px dashed rgba(148, 163, 214, 0.14) !important; }
+[data-theme="dark"] .nav-timeline-label{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .nav-timeline-value{
+  color: var(--hx-lime) !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+[data-theme="dark"] .nav-timeline-empty{ color: var(--hx-dim) !important; }
+
+/* ---------- Mobile drawer ---------- */
+
+[data-theme="dark"] .nav-drawer{
+  background: linear-gradient(175deg, #0b1020, #070a13) !important;
+  border-left: 1px solid var(--hx-line-hot) !important;
+}
+[data-theme="dark"] .drawer-header{ border-bottom: 1px solid var(--hx-line) !important; }
+[data-theme="dark"] .drawer-title{ color: var(--hx-text) !important; }
+[data-theme="dark"] .close-drawer{ color: var(--hx-cyan) !important; background: transparent !important; }
+[data-theme="dark"] .drawer-links li a, [data-theme="dark"] .drawer-group-toggle{
+  color: var(--hx-dim) !important;
+  background: transparent !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+[data-theme="dark"] .drawer-links li a:hover, [data-theme="dark"] .drawer-group-toggle:hover{ color: var(--hx-cyan) !important; }
+[data-theme="dark"] .drawer-links li a.active{ color: var(--hx-cyan) !important; }
+[data-theme="dark"] .drawer-sublist{ background: rgba(124, 92, 255, 0.07) !important; }
+[data-theme="dark"] .drawer-timeline-row{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .drawer-timeline-value{ color: var(--hx-lime) !important; }
+[data-theme="dark"] .nav-backdrop{ background: rgba(4, 6, 12, 0.7) !important; }
+
+/* ---------- Cards & panels (site-wide glass) ---------- */
+
+[data-theme="dark"] .subpage-placeholder-card, [data-theme="dark"] .faq-item, [data-theme="dark"] .faq-list, [data-theme="dark"] .faq-help-box, [data-theme="dark"] .faq-search-box, [data-theme="dark"] .problem-card, [data-theme="dark"] .journey-card, [data-theme="dark"] .vtl-card, [data-theme="dark"] .hscroll-card, [data-theme="dark"] .about-info-card, [data-theme="dark"] .organizer-card, [data-theme="dark"] .technology-card, [data-theme="dark"] .pipeline-item, [data-theme="dark"] .featured-info-card, [data-theme="dark"] .contact-item, [data-theme="dark"] .login-card, [data-theme="dark"] .registration-card, [data-theme="dark"] .hero-countdown-light, [data-theme="dark"] .journey-stage-link > a{
+  background: var(--hx-surface) !important;
+  border: 1px solid var(--hx-line) !important;
+  color: var(--hx-text) !important;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .problem-card:hover, [data-theme="dark"] .journey-card:hover, [data-theme="dark"] .vtl-card:hover, [data-theme="dark"] .organizer-card:hover, [data-theme="dark"] .technology-card:hover, [data-theme="dark"] .faq-item:hover, [data-theme="dark"] .journey-stage-link > a:hover{
+  border-color: var(--hx-line-hot) !important;
+  box-shadow: 0 18px 46px rgba(124, 92, 255, 0.28) !important;
+}
+
+[data-theme="dark"] .subpage-section, [data-theme="dark"] .faq-section, [data-theme="dark"] .ps-section, [data-theme="dark"] .journey-section, [data-theme="dark"] .about-section, [data-theme="dark"] .subpage-hero, [data-theme="dark"] .faq-hero, [data-theme="dark"] .ps-hero, [data-theme="dark"] .journey-hero, [data-theme="dark"] .about-hero, [data-theme="dark"] .about-dark-section, [data-theme="dark"] .content{
+  background: transparent !important;
+}
+
+/* Numbers / stage chips glow. */
+[data-theme="dark"] .problem-number, [data-theme="dark"] .journey-stage, [data-theme="dark"] .section-number, [data-theme="dark"] .journey-marker span, [data-theme="dark"] .vtl-card-status, [data-theme="dark"] .status-badge, [data-theme="dark"] .journey-stage-num{
+  background: rgba(124, 92, 255, 0.16) !important;
+  color: var(--hx-cyan) !important;
+  border: 1px solid rgba(124, 92, 255, 0.35) !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+
+/* ---------- Buttons ---------- */
+
+[data-theme="dark"] .hero-cta, [data-theme="dark"] .about-btn, [data-theme="dark"] .ps-register-btn, [data-theme="dark"] .home-cta, [data-theme="dark"] .login-submit-btn, [data-theme="dark"] .registration-submit-btn, [data-theme="dark"] .faq-help-box a{
+  border-radius: 12px !important;
+  font-family: "Space Grotesk", monospace !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  transition: transform .2s ease, box-shadow .2s ease !important;
+}
+
+[data-theme="dark"] .hero-cta.gold, [data-theme="dark"] .ps-register-btn, [data-theme="dark"] .home-cta, [data-theme="dark"] .login-submit-btn, [data-theme="dark"] .registration-submit-btn{
+  background: linear-gradient(120deg, var(--hx-violet), var(--hx-cyan)) !important;
+  color: #080d1a !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.45) !important;
+}
+
+[data-theme="dark"] .hero-cta.secondary, [data-theme="dark"] .about-btn-outline{
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--hx-text) !important;
+  border: 1px solid var(--hx-line-hot) !important;
+}
+
+[data-theme="dark"] .hero-cta:hover, [data-theme="dark"] .ps-register-btn:hover, [data-theme="dark"] .home-cta:hover, [data-theme="dark"] .login-submit-btn:hover, [data-theme="dark"] .registration-submit-btn:hover{
+  transform: translateY(-3px) !important;
+  box-shadow: 0 18px 40px rgba(124, 92, 255, 0.6) !important;
+}
+
+/* ---------- Homepage hero ---------- */
+
+[data-theme="dark"] .main-theme-heading{ color: var(--hx-text) !important; }
+
+[data-theme="dark"] .hero-countdown-light{ border-radius: 20px !important; }
+[data-theme="dark"] .hero-countdown-light-label{
+  color: var(--hx-cyan) !important;
+  font-family: "Space Grotesk", monospace !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+[data-theme="dark"] .hero-countdown-light-date{ color: var(--hx-dim) !important; }
+
+[data-theme="dark"] .countdown .unit, [data-theme="dark"] .vtl-countdown-unit{
+  background: rgba(124, 92, 255, 0.1) !important;
+  border: 1px solid rgba(124, 92, 255, 0.28) !important;
+  border-radius: 12px !important;
+}
+[data-theme="dark"] .countdown .number, [data-theme="dark"] .vtl-countdown-value{
+  color: var(--hx-lime) !important;
+  font-family: "Space Grotesk", monospace !important;
+  text-shadow: 0 0 22px rgba(163, 230, 53, 0.45);
+}
+[data-theme="dark"] .countdown .label, [data-theme="dark"] .vtl-countdown-unit-label{
+  color: var(--hx-dim) !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+
+[data-theme="dark"] .hero-fact-badge{
+  background: var(--hx-surface-2) !important;
+  border: 1px solid var(--hx-line) !important;
+}
+[data-theme="dark"] .hero-fact-badge-label{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .hero-fact-badge-value{ color: var(--hx-text) !important; }
+
+/* Prize badge keeps its gold identity against the neon. */
+[data-theme="dark"] .hero-fact-badge-prize{
+  background: linear-gradient(135deg, var(--hx-gold), #f59e0b) !important;
+  border-color: rgba(251, 191, 36, 0.6) !important;
+}
+[data-theme="dark"] .hero-fact-badge-prize .hero-fact-badge-label, [data-theme="dark"] .hero-fact-badge-prize .hero-fact-badge-value{ color: #2a1a00 !important; }
+
+/* ---------- Timeline page ---------- */
+
+[data-theme="dark"] .vtl-track-line{ background: rgba(148, 163, 214, 0.16) !important; }
+[data-theme="dark"] .vtl-track-fill, [data-theme="dark"] .vtl-progress-fill{
+  background: linear-gradient(180deg, var(--hx-violet), var(--hx-cyan)) !important;
+}
+[data-theme="dark"] .vtl-progress-track{ background: rgba(148, 163, 214, 0.14) !important; }
+[data-theme="dark"] .vtl-progress-label{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .vtl-progress-label strong{ color: var(--hx-lime) !important; }
+[data-theme="dark"] .vtl-node{ background: #0b1020 !important; border: 2px solid var(--hx-violet) !important; }
+[data-theme="dark"] .vtl-node-wrap.done .vtl-node{ background: var(--hx-lime) !important; border-color: var(--hx-lime) !important; }
+[data-theme="dark"] .vtl-node-wrap.current .vtl-node{
+  background: var(--hx-cyan) !important;
+  border-color: var(--hx-cyan) !important;
+  box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.22), 0 0 26px rgba(34, 211, 238, 0.7) !important;
+}
+[data-theme="dark"] .vtl-card-milestone{ color: var(--hx-text) !important; }
+[data-theme="dark"] .vtl-card-date{ color: var(--hx-lime) !important; font-family: "Space Grotesk", monospace !important; }
+[data-theme="dark"] .vtl-card-detail p, [data-theme="dark"] .vtl-card-toggle{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .vtl-countdown{ background: var(--hx-surface) !important; border: 1px solid var(--hx-line) !important; }
+[data-theme="dark"] .vtl-countdown-label{ color: var(--hx-cyan) !important; }
+[data-theme="dark"] .vtl-countdown-date, [data-theme="dark"] .vtl-countdown-sep{ color: var(--hx-dim) !important; }
+
+/* ---------- FAQ ---------- */
+
+[data-theme="dark"] .faq-item summary, [data-theme="dark"] .faq-item > summary{ color: var(--hx-text) !important; }
+[data-theme="dark"] .faq-answer, [data-theme="dark"] .faq-answer p{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .faq-item[open]{ border-color: var(--hx-line-hot) !important; }
+[data-theme="dark"] .faq-search-box input, [data-theme="dark"] .faq-search-box input::placeholder{ color: var(--hx-dim) !important; }
+
+/* ---------- Forms (login / registration) ---------- */
+
+[data-theme="dark"] .login-wrapper, [data-theme="dark"] .registration-wrapper{ background: transparent !important; }
+[data-theme="dark"] .login-brand-section, [data-theme="dark"] .registration-brand-section{ background: transparent !important; }
+[data-theme="dark"] .login-card-header h1, [data-theme="dark"] .registration-card-header h1, [data-theme="dark"] .login-card-header h2, [data-theme="dark"] .registration-card-header h2{ color: var(--hx-text) !important; }
+[data-theme="dark"] .login-card-header p, [data-theme="dark"] .registration-card-header p, [data-theme="dark"] .login-card-footer, [data-theme="dark"] .registration-card-footer{ color: var(--hx-dim) !important; }
+
+[data-theme="dark"] .input-wrapper input, [data-theme="dark"] .registration-input-wrapper input, [data-theme="dark"] .registration-input-wrapper select, [data-theme="dark"] input[type="text"], [data-theme="dark"] input[type="email"], [data-theme="dark"] input[type="password"], [data-theme="dark"] input[type="tel"], [data-theme="dark"] select, [data-theme="dark"] textarea{
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--hx-line) !important;
+  color: var(--hx-text) !important;
+}
+[data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder{ color: rgba(152, 164, 200, 0.65) !important; }
+[data-theme="dark"] input:focus, [data-theme="dark"] select:focus, [data-theme="dark"] textarea:focus{
+  border-color: var(--hx-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18) !important;
+  outline: none !important;
+}
+[data-theme="dark"] select option{ background: #0b1020 !important; color: var(--hx-text) !important; }
+[data-theme="dark"] .custom-checkbox{ border-color: var(--hx-line-hot) !important; background: rgba(255,255,255,.05) !important; }
+
+/* ---------- 404 ---------- */
+
+[data-theme="dark"] .error-code{
+  background: linear-gradient(120deg, var(--hx-violet), var(--hx-cyan)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+[data-theme="dark"] .container .badge{
+  background: rgba(34, 211, 238, 0.12) !important;
+  color: var(--hx-cyan) !important;
+  border: 1px solid rgba(34, 211, 238, 0.35) !important;
+}
+
+/* ---------- Footer ---------- */
+
+[data-theme="dark"] .page-footer{
+  background: linear-gradient(180deg, rgba(8, 12, 22, 0.4), rgba(6, 9, 17, 0.95)) !important;
+  border-top: 1px solid var(--hx-line-hot) !important;
+  color: var(--hx-dim) !important;
+}
+[data-theme="dark"] .footer-col h2{
+  color: var(--hx-text) !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+[data-theme="dark"] .social-btn{
+  background: var(--hx-surface) !important;
+  border: 1px solid var(--hx-line) !important;
+  color: var(--hx-text) !important;
+}
+[data-theme="dark"] .social-btn:hover{
+  border-color: var(--hx-cyan) !important;
+  color: var(--hx-cyan) !important;
+  box-shadow: 0 8px 24px rgba(34, 211, 238, 0.25) !important;
+}
+[data-theme="dark"] .contact-link-item, [data-theme="dark"] .contact-link-item span{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .contact-icon-badge{
+  background: rgba(124, 92, 255, 0.16) !important;
+  border: 1px solid rgba(124, 92, 255, 0.3) !important;
+}
+[data-theme="dark"] .footer-bottom-bar{
+  border-top: 1px solid var(--hx-line) !important;
+  color: rgba(152, 164, 200, 0.75) !important;
+}
+
+/* ---------- Focus visibility on dark ---------- */
+
+[data-theme="dark"] a:focus-visible, [data-theme="dark"] button:focus-visible, [data-theme="dark"] summary:focus-visible, [data-theme="dark"] [tabindex]:focus-visible{
+  outline: 2px solid var(--hx-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .hero-cta:hover, [data-theme="dark"] .ps-register-btn:hover, [data-theme="dark"] .home-cta:hover{ transform: none !important; }
+}
+
+/* ---------- Theme fixes ---------- */
+
+/* The gradient-text treatment leaves the old gold plate behind; drop it. */
+[data-theme="dark"] .hackathon-highlight{
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+/* faq-eyebrow was missed by the kicker group above. */
+[data-theme="dark"] .faq-eyebrow{
+  display: inline-block;
+  font-family: "Space Grotesk", monospace !important;
+  color: var(--hx-cyan) !important;
+  background: rgba(34, 211, 238, 0.1) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+  border-radius: 999px !important;
+  padding: 5px 14px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+}
+
+/* The FAQ list wrapper doubles the card surface — let the items carry it. */
+[data-theme="dark"] .faq-list{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Eyebrow pills are flex children on several pages — keep them hugging
+   their text instead of stretching to the container width. */
+[data-theme="dark"] .subpage-eyebrow, [data-theme="dark"] .ps-eyebrow, [data-theme="dark"] .journey-eyebrow, [data-theme="dark"] .journey-kicker, [data-theme="dark"] .section-tag, [data-theme="dark"] .eyebrow, [data-theme="dark"] .faq-kicker, [data-theme="dark"] .faq-eyebrow{
+  display: inline-block !important;
+  width: auto !important;
+  max-width: max-content !important;
+  align-self: center !important;
+}
+
+/* Left-aligned section kickers should hug the left edge, not centre. */
+[data-theme="dark"] .journey-kicker, [data-theme="dark"] .section-tag{ align-self: flex-start !important; }
+
+/* ---------- Remaining light surfaces from the base stylesheet ---------- */
+
+/* Page-level wrappers that painted their own light ground. */
+[data-theme="dark"] .about-content, [data-theme="dark"] .ps-page, [data-theme="dark"] .organizers-section, [data-theme="dark"] .pipeline-section, [data-theme="dark"] .problem-statements-page, [data-theme="dark"] .login-page, [data-theme="dark"] .faq-page, [data-theme="dark"] .registration-page{
+  background: transparent !important;
+}
+
+/* Legacy header/nav rules kept for about.html compatibility. */
+[data-theme="dark"] .top-header, [data-theme="dark"] .navbar{
+  background: rgba(8, 12, 22, 0.9) !important;
+  border-color: var(--hx-line) !important;
+}
+[data-theme="dark"] .announcement-bar{
+  background: linear-gradient(90deg, rgba(124, 92, 255, 0.16), rgba(34, 211, 238, 0.12)) !important;
+  border-color: var(--hx-line) !important;
+}
+[data-theme="dark"] .nav-links a{ color: var(--hx-dim) !important; }
+[data-theme="dark"] .nav-links a:hover, [data-theme="dark"] .nav-links a.active{
+  color: var(--hx-cyan) !important;
+  background: rgba(34, 211, 238, 0.1) !important;
+}
+[data-theme="dark"] .menu-btn{ background: rgba(255, 255, 255, 0.07) !important; }
+[data-theme="dark"] .menu-btn span{ background: var(--hx-cyan) !important; }
+
+/* Small light chips / controls. */
+[data-theme="dark"] .faq-categories, [data-theme="dark"] .faq-empty, [data-theme="dark"] .filter-btn, [data-theme="dark"] .page-arrow, [data-theme="dark"] .hscroll-nav-btn, [data-theme="dark"] .hscroll-node, [data-theme="dark"] .hscroll-node-wrap.upcoming .hscroll-node, [data-theme="dark"] .timeline-row, [data-theme="dark"] .faq-plus, [data-theme="dark"] .close-modal, [data-theme="dark"] .google-icon{
+  background: var(--hx-surface-2) !important;
+  border-color: var(--hx-line) !important;
+  color: var(--hx-text) !important;
+}
+[data-theme="dark"] .filter-btn.active, [data-theme="dark"] .hscroll-nav-btn:hover, [data-theme="dark"] .faq-plus{
+  color: var(--hx-cyan) !important;
+}
+
+/* The problem-statement modal is a full light panel. */
+[data-theme="dark"] .problem-modal{
+  background: linear-gradient(160deg, #0e1424, #0a0f1c) !important;
+  border: 1px solid var(--hx-line-hot) !important;
+  color: var(--hx-text) !important;
+}
+[data-theme="dark"] .problem-modal h2, [data-theme="dark"] .problem-modal h3{ color: var(--hx-text) !important; }
+[data-theme="dark"] .problem-modal p, [data-theme="dark"] .problem-modal li{ color: var(--hx-dim) !important; }
+
+/* Numbered labels are flex children too — keep them from stretching. */
+[data-theme="dark"] .section-number, [data-theme="dark"] .problem-number, [data-theme="dark"] .journey-stage, [data-theme="dark"] .status-badge{
+  display: inline-block !important;
+  width: auto !important;
+  max-width: max-content !important;
+  align-self: flex-start !important;
+}
+
+/* Google button keeps its required white treatment. */
+[data-theme="dark"] .google-login-btn{ background: #fff !important; color: #1f2937 !important; }
+
+/* Breathing room after inline number chips. */
+[data-theme="dark"] .section-number{ margin-right: 10px !important; }
+
+/* =========================================================
+   SUTRAM 2026 — "DAYLIGHT" LIGHT THEME
+   Scoped to [data-theme="light"]. Builds on the original
+   sky-blue base underneath: brighter sky gradients, a
+   colour-blob backdrop, gradient headings, candy pills and
+   springy cards. Dark lives in the layer above this one.
+   ========================================================= */
+
+:root[data-theme="light"] {
+  --lt-sky:     #0ea5e9;
+  --lt-sky-2:   #38bdf8;
+  --lt-deep:    #075985;
+  --lt-violet:  #7c3aed;
+  --lt-coral:   #fb7185;
+  --lt-amber:   #f59e0b;
+  --lt-lime:    #65a30d;
+  --lt-ink:     #0b2f4d;
+  --lt-body:    #40607d;
+  --lt-line:    rgba(14, 165, 233, 0.22);
+  --lt-surface: #ffffff;
+
+  --ink-primary:   #0b2f4d;
+  --ink-secondary: #2f5877;
+  --ink-muted:     #5b7c98;
+  --accent-blue:   #0ea5e9;
+  --accent-cyan:   #38bdf8;
+  --border-line:   rgba(14, 165, 233, 0.22);
+  --card-bg:       #ffffff;
+}
+
+/* ---------- Ground: bright sky + drifting colour blobs ---------- */
+
+html[data-theme="light"], [data-theme="light"] body {
+  background: #eef8ff !important;
+  color: var(--lt-ink) !important;
+}
+
+[data-theme="light"] body {
+  background-image:
+    radial-gradient(circle at 10% 6%,  rgba(56, 189, 248, 0.30) 0%, transparent 40%),
+    radial-gradient(circle at 92% 10%, rgba(124, 58, 237, 0.16) 0%, transparent 38%),
+    radial-gradient(circle at 78% 88%, rgba(251, 113, 133, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 18% 92%, rgba(101, 163, 13, 0.13) 0%, transparent 40%),
+    linear-gradient(180deg, #eef8ff 0%, #f7fcff 45%, #eaf6ff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Blueprint grid, brighter than the dark theme's. */
+[data-theme="light"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.10) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 24%, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle at 50% 24%, #000 0%, transparent 72%);
+}
+
+[data-theme="light"] .page,
+[data-theme="light"] .announcement { position: relative; z-index: 1; background: transparent !important; }
+
+[data-theme="light"] .about-content, [data-theme="light"] .ps-page,
+[data-theme="light"] .organizers-section, [data-theme="light"] .pipeline-section,
+[data-theme="light"] .problem-statements-page, [data-theme="light"] .login-page,
+[data-theme="light"] .faq-page, [data-theme="light"] .registration-page,
+[data-theme="light"] .subpage-section, [data-theme="light"] .faq-section,
+[data-theme="light"] .ps-section, [data-theme="light"] .journey-section,
+[data-theme="light"] .about-section, [data-theme="light"] .content {
+  background: transparent !important;
+}
+
+/* ---------- Type ---------- */
+
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3 {
+  color: var(--lt-ink) !important;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="light"] .message, [data-theme="light"] .tagline,
+[data-theme="light"] .subpage-hero-content p, [data-theme="light"] .faq-hero-content p,
+[data-theme="light"] .ps-intro-text, [data-theme="light"] .journey-heading p,
+[data-theme="light"] .about-section p, [data-theme="light"] .subpage-section p {
+  color: var(--lt-body) !important;
+}
+
+/* Headline accents run sky -> violet, warmer and louder than the base. */
+[data-theme="light"] h1 span, [data-theme="light"] h2 span,
+[data-theme="light"] .hackathon-highlight,
+[data-theme="light"] .journey-heading h2 span,
+[data-theme="light"] .journey-stages-title span {
+  background: linear-gradient(115deg, var(--lt-sky) 0%, var(--lt-violet) 55%, var(--lt-coral) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+[data-theme="light"] .tagline {
+  font-family: "Space Grotesk", monospace !important;
+  letter-spacing: 0.34em !important;
+  color: var(--lt-deep) !important;
+}
+
+/* Candy pill kickers. */
+[data-theme="light"] .subpage-eyebrow, [data-theme="light"] .ps-eyebrow,
+[data-theme="light"] .journey-eyebrow, [data-theme="light"] .journey-kicker,
+[data-theme="light"] .section-tag, [data-theme="light"] .eyebrow,
+[data-theme="light"] .faq-eyebrow {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: max-content !important;
+  align-self: center !important;
+  font-family: "Space Grotesk", monospace !important;
+  color: #fff !important;
+  background: linear-gradient(120deg, var(--lt-sky), var(--lt-violet)) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 6px 16px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.35) !important;
+}
+[data-theme="light"] .journey-kicker,
+[data-theme="light"] .section-tag { align-self: flex-start !important; }
+
+/* ---------- Chrome ---------- */
+
+[data-theme="light"] .topbar {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-bottom: 1px solid var(--lt-line) !important;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 24px rgba(14, 165, 233, 0.1) !important;
+}
+[data-theme="light"] .igdtuw-image,
+[data-theme="light"] .logo-image,
+[data-theme="light"] .isea-image { background: none; box-shadow: none; padding: 0; }
+
+[data-theme="light"] .login-btn {
+  background: linear-gradient(120deg, var(--lt-sky), var(--lt-violet)) !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 800 !important;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.35) !important;
+}
+
+[data-theme="light"] .notification-marquee {
+  background: linear-gradient(90deg, #0ea5e9, #7c3aed 55%, #fb7185) !important;
+  border: none !important;
+}
+[data-theme="light"] .marquee-text { color: #fff !important; font-weight: 600; }
+[data-theme="light"] .marquee-text .highlight {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+[data-theme="light"] .hamburger-btn .bar { background: var(--lt-sky) !important; }
+
+[data-theme="light"] .primary-nav {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border-bottom: 1px solid var(--lt-line) !important;
+  backdrop-filter: blur(10px);
+}
+[data-theme="light"] .primary-nav > a,
+[data-theme="light"] .nav-dropdown-toggle {
+  color: #2f5877 !important;
+  font-family: "Space Grotesk", monospace !important;
+  background: transparent !important;
+  border: none !important;
+}
+[data-theme="light"] .primary-nav > a:hover,
+[data-theme="light"] .nav-dropdown-toggle:hover { color: var(--lt-violet) !important; }
+[data-theme="light"] .primary-nav > a.active {
+  color: var(--lt-sky) !important;
+  text-shadow: none;
+}
+
+[data-theme="light"] .nav-dropdown-menu {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid var(--lt-line) !important;
+  box-shadow: 0 22px 50px rgba(11, 47, 77, 0.16) !important;
+}
+[data-theme="light"] .nav-dropdown-menu a,
+[data-theme="light"] .nav-dropdown-link { color: #2f5877 !important; border-radius: 8px; }
+[data-theme="light"] .nav-dropdown-menu a:hover {
+  background: rgba(14, 165, 233, 0.12) !important;
+  color: var(--lt-deep) !important;
+}
+[data-theme="light"] .nav-timeline-value { color: var(--lt-violet) !important; font-weight: 700; }
+
+[data-theme="light"] .nav-drawer {
+  background: linear-gradient(180deg, #ffffff, #eef8ff) !important;
+  border-left: 1px solid var(--lt-line) !important;
+}
+[data-theme="light"] .drawer-title { color: var(--lt-ink) !important; }
+[data-theme="light"] .drawer-links li a,
+[data-theme="light"] .drawer-group-toggle { color: #2f5877 !important; }
+[data-theme="light"] .drawer-sublist { background: rgba(14, 165, 233, 0.07) !important; }
+
+/* ---------- Cards: white, springy, colour-shadowed ---------- */
+
+[data-theme="light"] .subpage-placeholder-card, [data-theme="light"] .faq-item,
+[data-theme="light"] .problem-card, [data-theme="light"] .journey-card,
+[data-theme="light"] .vtl-card, [data-theme="light"] .about-info-card,
+[data-theme="light"] .organizer-card, [data-theme="light"] .technology-card,
+[data-theme="light"] .pipeline-item, [data-theme="light"] .login-card,
+[data-theme="light"] .registration-card, [data-theme="light"] .hero-countdown-light,
+[data-theme="light"] .faq-help-box, [data-theme="light"] .journey-stage-link > a {
+  background: var(--lt-surface) !important;
+  border: 1px solid var(--lt-line) !important;
+  color: var(--lt-ink) !important;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.14) !important;
+}
+
+[data-theme="light"] .problem-card:hover, [data-theme="light"] .journey-card:hover,
+[data-theme="light"] .vtl-card:hover, [data-theme="light"] .organizer-card:hover,
+[data-theme="light"] .faq-item:hover, [data-theme="light"] .journey-stage-link > a:hover {
+  border-color: rgba(124, 58, 237, 0.45) !important;
+  box-shadow: 0 20px 44px rgba(124, 58, 237, 0.22) !important;
+}
+
+/* Number chips cycle through the accent set so grids feel lively. */
+[data-theme="light"] .problem-number, [data-theme="light"] .journey-stage,
+[data-theme="light"] .section-number, [data-theme="light"] .journey-stage-num,
+[data-theme="light"] .vtl-card-status, [data-theme="light"] .status-badge {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: max-content !important;
+  color: #fff !important;
+  background: linear-gradient(120deg, var(--lt-sky), var(--lt-violet)) !important;
+  border: none !important;
+  font-family: "Space Grotesk", monospace !important;
+  box-shadow: 0 5px 14px rgba(14, 165, 233, 0.3) !important;
+}
+[data-theme="light"] .problem-card:nth-child(2n) .problem-number {
+  background: linear-gradient(120deg, var(--lt-violet), var(--lt-coral)) !important;
+}
+[data-theme="light"] .problem-card:nth-child(3n) .problem-number {
+  background: linear-gradient(120deg, var(--lt-amber), var(--lt-coral)) !important;
+}
+[data-theme="light"] .section-number { margin-right: 10px !important; }
+
+/* ---------- Buttons ---------- */
+
+[data-theme="light"] .hero-cta, [data-theme="light"] .ps-register-btn,
+[data-theme="light"] .home-cta, [data-theme="light"] .login-submit-btn,
+[data-theme="light"] .registration-submit-btn, [data-theme="light"] .about-btn {
+  border-radius: 12px !important;
+  font-family: "Space Grotesk", monospace !important;
+  font-weight: 800 !important;
+  transition: transform .2s ease, box-shadow .2s ease !important;
+}
+[data-theme="light"] .hero-cta.gold, [data-theme="light"] .ps-register-btn,
+[data-theme="light"] .home-cta, [data-theme="light"] .login-submit-btn,
+[data-theme="light"] .registration-submit-btn {
+  background: linear-gradient(120deg, var(--lt-sky), var(--lt-violet)) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 10px 26px rgba(124, 58, 237, 0.35) !important;
+}
+[data-theme="light"] .hero-cta.secondary {
+  background: #fff !important;
+  color: var(--lt-deep) !important;
+  border: 1px solid rgba(14, 165, 233, 0.4) !important;
+}
+[data-theme="light"] .hero-cta:hover, [data-theme="light"] .ps-register-btn:hover,
+[data-theme="light"] .home-cta:hover, [data-theme="light"] .login-submit-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.45) !important;
+}
+
+/* ---------- Countdown ---------- */
+
+[data-theme="light"] .hero-countdown-light-label,
+[data-theme="light"] .vtl-countdown-label {
+  color: var(--lt-violet) !important;
+  font-family: "Space Grotesk", monospace !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+[data-theme="light"] .countdown .unit, [data-theme="light"] .vtl-countdown-unit {
+  background: linear-gradient(160deg, #ffffff, #eaf6ff) !important;
+  border: 1px solid var(--lt-line) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.16) !important;
+}
+[data-theme="light"] .countdown .number, [data-theme="light"] .vtl-countdown-value {
+  font-family: "Space Grotesk", monospace !important;
+  background: linear-gradient(135deg, var(--lt-sky), var(--lt-violet)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+[data-theme="light"] .countdown .label,
+[data-theme="light"] .vtl-countdown-unit-label { color: var(--lt-body) !important; }
+
+/* ---------- Timeline ---------- */
+
+[data-theme="light"] .vtl-track-fill, [data-theme="light"] .vtl-progress-fill {
+  background: linear-gradient(180deg, var(--lt-sky), var(--lt-violet)) !important;
+}
+[data-theme="light"] .vtl-node { background: #fff !important; border: 2px solid var(--lt-sky) !important; }
+[data-theme="light"] .vtl-node-wrap.done .vtl-node {
+  background: var(--lt-lime) !important; border-color: var(--lt-lime) !important;
+}
+[data-theme="light"] .vtl-node-wrap.current .vtl-node {
+  background: var(--lt-violet) !important; border-color: var(--lt-violet) !important;
+  box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.18) !important;
+}
+[data-theme="light"] .vtl-card-date { color: var(--lt-violet) !important; font-weight: 700; }
+
+/* ---------- Footer ---------- */
+
+[data-theme="light"] .page-footer {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), #e6f4ff) !important;
+  border-top: 2px solid transparent !important;
+  border-image: linear-gradient(90deg, var(--lt-sky), var(--lt-violet), var(--lt-coral)) 1 !important;
+  color: var(--lt-body) !important;
+}
+[data-theme="light"] .footer-col h2 {
+  color: var(--lt-ink) !important;
+  font-family: "Space Grotesk", monospace !important;
+}
+[data-theme="light"] .social-btn {
+  background: #fff !important;
+  border: 1px solid var(--lt-line) !important;
+  color: var(--lt-deep) !important;
+}
+[data-theme="light"] .social-btn:hover {
+  border-color: var(--lt-violet) !important;
+  color: var(--lt-violet) !important;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.2) !important;
+}
+[data-theme="light"] .contact-icon-badge {
+  background: linear-gradient(120deg, var(--lt-sky), var(--lt-violet)) !important;
+  border: none !important;
+}
+
+[data-theme="light"] a:focus-visible, [data-theme="light"] button:focus-visible {
+  outline: 2px solid var(--lt-violet) !important;
+  outline-offset: 2px !important;
+}
+
+/* =========================================================
+   THEME TOGGLE (light / dark)
+   Injected by main.js into .topbar-right when a top bar
+   exists, otherwise pinned to the top-right of the viewport.
+   ========================================================= */
+
+.theme-toggle {
+  --tt-knob: 22px;
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  width: 58px;
+  height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid var(--border-line, rgba(14, 165, 233, 0.3));
+  background: rgba(14, 165, 233, 0.12);
+  transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:hover { box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12); }
+
+.theme-toggle-knob {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: var(--tt-knob);
+  height: var(--tt-knob);
+  margin-top: calc(var(--tt-knob) / -2);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  line-height: 1;
+  background: linear-gradient(135deg, #38bdf8, #7c3aed);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(11, 47, 77, 0.3);
+  transition: transform .32s cubic-bezier(.34, 1.56, .64, 1), background .3s ease;
+}
+
+.theme-toggle-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 7px;
+  font-size: 10px;
+  line-height: 1;
+  opacity: .55;
+  pointer-events: none;
+}
+
+/* Dark state */
+[data-theme="dark"] .theme-toggle {
+  background: rgba(124, 92, 255, 0.18);
+  border-color: rgba(124, 92, 255, 0.45);
+}
+[data-theme="dark"] .theme-toggle:hover { box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.18); }
+[data-theme="dark"] .theme-toggle-knob {
+  transform: translateX(26px);
+  background: linear-gradient(135deg, #7c5cff, #22d3ee);
+}
+
+/* Floating fallback for pages with no top bar (login, registration). */
+.theme-toggle.floating {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9990;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+}
+[data-theme="dark"] .theme-toggle.floating { background: rgba(12, 17, 32, 0.75); }
+
+/* Drawer variant: a full-width row so it is reachable on mobile. */
+.drawer-links .theme-toggle-row {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+}
+.drawer-links .theme-toggle-row span {
+  font-family: "Space Grotesk", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle, .theme-toggle-knob { transition: none !important; }
+}
+
+@media (max-width: 680px) {
+  .theme-toggle.floating { top: 12px; right: 12px; }
+}
+
+
+/* Logo artwork swaps with the theme: navy original on light, the
+   lightened variant on dark. Only one is ever rendered. */
+.theme-logo-dark  { display: none !important; }
+.theme-logo-light { display: block !important; }
+[data-theme="dark"] .theme-logo-dark  { display: block !important; }
+[data-theme="dark"] .theme-logo-light { display: none !important; }

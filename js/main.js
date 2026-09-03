@@ -1,4 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ---- Light / dark theme toggle -------------------------------------
+  // The stored choice is applied by a tiny inline script in each page's
+  // <head> (so there is no flash of the wrong theme); this only builds
+  // the control and keeps it in sync.
+  const THEME_KEY = "sutram-theme";
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* private mode */ }
+    document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(theme === "dark"));
+      btn.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+      btn.setAttribute("title", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+      const knob = btn.querySelector(".theme-toggle-knob");
+      if (knob) knob.textContent = theme === "dark" ? "\u{1F319}" : "\u2600\uFE0F";
+    });
+  }
+
+  function buildToggle(extraClass) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "theme-toggle" + (extraClass ? " " + extraClass : "");
+    btn.setAttribute("data-theme-toggle", "");
+    btn.innerHTML =
+      '<span class="theme-toggle-track" aria-hidden="true"><span>\u2600\uFE0F</span><span>\u{1F319}</span></span>' +
+      '<span class="theme-toggle-knob" aria-hidden="true"></span>';
+    btn.addEventListener("click", () => {
+      applyTheme(currentTheme() === "dark" ? "light" : "dark");
+    });
+    return btn;
+  }
+
+  // Desktop: drop it into the top bar next to Login. Pages without a top
+  // bar (login, registration) get a floating one instead.
+  const topbarRight = document.querySelector(".topbar-right");
+  if (topbarRight) {
+    topbarRight.insertBefore(buildToggle(), topbarRight.querySelector(".login-btn"));
+  } else {
+    document.body.appendChild(buildToggle("floating"));
+  }
+
+  // Mobile drawer gets its own labelled row.
+  const drawerLinks = document.querySelector(".drawer-links");
+  if (drawerLinks) {
+    const row = document.createElement("li");
+    row.className = "theme-toggle-row";
+    const label = document.createElement("span");
+    label.textContent = "Theme";
+    row.appendChild(label);
+    row.appendChild(buildToggle());
+    drawerLinks.appendChild(row);
+  }
+
+  applyTheme(currentTheme());
+
   // 3-Line Hamburger Menu Toggle Logic
   const menuToggle = document.getElementById("menuToggle");
   const closeDrawer = document.getElementById("closeDrawer");
