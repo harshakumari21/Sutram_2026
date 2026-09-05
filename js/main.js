@@ -44,17 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(buildToggle("floating"));
   }
 
-  // Mobile drawer gets its own labelled row.
-  const drawerLinks = document.querySelector(".drawer-links");
-  if (drawerLinks) {
-    const row = document.createElement("li");
-    row.className = "theme-toggle-row";
-    const label = document.createElement("span");
-    label.textContent = "Theme";
-    row.appendChild(label);
-    row.appendChild(buildToggle());
-    drawerLinks.appendChild(row);
-  }
 
   applyTheme(currentTheme());
 
