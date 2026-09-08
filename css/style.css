@@ -864,24 +864,18 @@ a { color: inherit; text-decoration: none; }
 }
 
 .topbar .partner-logo {
-  height: 36px;
+  height: clamp(26px, 3vw, 42px);
   width: auto;
-  max-width: 95px;
+  max-width: clamp(78px, 9.2vw, 126px);
   object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
 }
 
 .topbar .partner-logo:hover {
   transform: translateY(-2px) scale(1.06);
 }
-
-.topbar .partner-logo.emblem-logo { height: 40px; }
-.topbar .partner-logo.isea-logo { height: 36px; }
-.topbar .partner-logo.cdac-logo { height: 30px; }
-.topbar .partner-logo.nfsu-logo { height: 34px; max-width: 92px; }
-.topbar .partner-logo.mnit-logo { height: 34px; }
-.topbar .partner-logo.iiit-logo { height: 34px; }
-.topbar .partner-logo.gtu-logo { height: 34px; }
 
 .topbar .logo-image { height: 40px; }
 .topbar .isea-image { height: 36px; }
@@ -9788,7 +9782,6 @@ html[data-theme="light"], [data-theme="light"] body {
   .igdtuw-wordmark strong { font-size: 13px; }
   .igdtuw-wordmark small { font-size: 8.5px; }
   .topbar .igdtuw-banner-img { height: 52px; max-width: 300px; }
-  .topbar .partner-logo { height: 26px; }
   .topbar .logo-image   { height: 28px; }
   .topbar .isea-image   { height: 28px; }
   .theme-toggle { flex: none; }
@@ -9797,7 +9790,6 @@ html[data-theme="light"], [data-theme="light"] body {
 @media (max-width: 1240px) {
   .topbar .igdtuw-banner-img { height: 54px; max-width: 320px; }
   .topbar-partner-logos { gap: 6px; }
-  .topbar .partner-logo { height: 30px; }
   .topbar-center-logo img { width: 120px; height: 50px; }
 }
 
@@ -9936,9 +9928,6 @@ html[data-theme="light"], [data-theme="light"] body {
     flex: 0 1 auto;
   }
 
-  .topbar-partner-logos .partner-logo.emblem-logo { height: 24px; }
-  .topbar-partner-logos .partner-logo.cdac-logo { height: 18px; }
-  .topbar-partner-logos .partner-logo.nfsu-logo { max-width: 34px; }
 }
 
 @media (max-width: 900px) {
@@ -11737,8 +11726,14 @@ html[data-theme="light"] .track {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(14, 34, 71, 0.18), 0 0 0 1px rgba(22, 139, 183, 0.18);
-  aspect-ratio: 612 / 792;
   background: #f1f5f9;
+}
+
+/* 792 / 612 = 129.41% — US Letter portrait. */
+.brochure-preview-frame::before {
+  content: "";
+  display: block;
+  padding-top: 129.41%;
 }
 
 .brochure-preview-shine {
@@ -11763,11 +11758,16 @@ html[data-theme="light"] .track {
    and renders nothing at all in iOS Safari. */
 .brochure-preview-scroll {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
+  touch-action: pan-y;
   background: #f1f5f9;
   scrollbar-width: thin;
   scrollbar-color: rgba(14, 34, 71, 0.28) transparent;
@@ -12092,10 +12092,6 @@ html[data-theme="light"] .track {
     grid-template-columns: 1fr;
     padding: 28px 20px;
     gap: 32px;
-  }
-
-  .brochure-preview-frame {
-    aspect-ratio: 612 / 792;
   }
 
   .brochure-contents {
@@ -13156,7 +13152,7 @@ a.topbar-center-logo {
   mask-image: linear-gradient(90deg, transparent 0, #000 18px);
   padding-block: 2px;
 }
-.partner-logo { height: clamp(22px, 3.4vw, 40px); width: auto; max-width: clamp(52px, 9vw, 95px); object-fit: contain; flex-shrink: 0; }
+.partner-logo { height: clamp(26px, 3vw, 42px); width: auto; max-width: clamp(78px, 9.2vw, 126px); object-fit: contain; flex-shrink: 0; }
 
 /* --- Hamburger: 44px touch target, reserves its own space --- */
 .hamburger-btn {
