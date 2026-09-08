@@ -1,0 +1,59 @@
+# SUTRAM 2026 — Apache / LiteSpeed configuration (Hostinger).
+# Netlify applies equivalent behaviour automatically; this file exists so a
+# plain Apache host serves the identical bytes with the identical headers.
+
+# ---- Correct MIME types + charset -----------------------------------
+# Hostinger was serving JS as the non-standard "application/x-javascript"
+# and CSS without a charset, so the browser had to guess the encoding.
+AddType text/css                     .css
+AddType application/javascript       .js
+AddType image/svg+xml                .svg
+AddType image/webp                   .webp
+AddType image/avif                   .avif
+AddType application/pdf              .pdf
+AddType application/vnd.openxmlformats-officedocument.presentationml.presentation .pptx
+
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js
+</IfModule>
+
+# ---- Compression -----------------------------------------------------
+# style.css is ~292 KB uncompressed and compresses to ~53 KB.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---- Caching ---------------------------------------------------------
+# HTML must revalidate so edits go live immediately; static assets are
+# safe to cache hard because they are referenced with ?v= cache-busters.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType image/png                     "access plus 1 year"
+  ExpiresByType image/jpeg                    "access plus 1 year"
+  ExpiresByType image/webp                    "access plus 1 year"
+  ExpiresByType image/avif                    "access plus 1 year"
+  ExpiresByType application/pdf               "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ---- Directory index -------------------------------------------------
+DirectoryIndex index.html
+
+# ---- Custom 404 ------------------------------------------------------
+# Without this, a missing page falls through to Hostinger's default
+# error page instead of the site's own styled 404.
+ErrorDocument 404 /pages/404.html
+
+# ---- Do not serve source PDFs' directory listings ---------------------
+Options -Indexes
