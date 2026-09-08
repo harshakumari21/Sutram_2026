@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/registration.html
