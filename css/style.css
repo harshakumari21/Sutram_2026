@@ -11634,12 +11634,6 @@ html[data-theme="light"] .track {
   background: #f8fafc;
 }
 
-.brochure-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
 /* Dark mode overrides */
 [data-theme="dark"] .brochure-hero-card,
 [data-theme="dark"] .brochure-feat-box,
@@ -11743,8 +11737,8 @@ html[data-theme="light"] .track {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(14, 34, 71, 0.18), 0 0 0 1px rgba(22, 139, 183, 0.18);
-  aspect-ratio: 3 / 4;
-  background: #0d1527;
+  aspect-ratio: 612 / 792;
+  background: #f1f5f9;
 }
 
 .brochure-preview-shine {
@@ -11764,11 +11758,44 @@ html[data-theme="light"] .track {
   100% { background-position: -200% 0; }
 }
 
-.brochure-iframe {
+/* Scrollable multi-page document preview. Pages are pre-rendered images
+   rather than an embedded PDF: the browser's PDF plugin clipped the page
+   and renders nothing at all in iOS Safari. */
+.brochure-preview-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  background: #f1f5f9;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 34, 71, 0.28) transparent;
+}
+
+.brochure-preview-scroll::-webkit-scrollbar { width: 8px; }
+.brochure-preview-scroll::-webkit-scrollbar-track { background: transparent; }
+.brochure-preview-scroll::-webkit-scrollbar-thumb {
+  background: rgba(14, 34, 71, 0.28);
+  border-radius: 8px;
+}
+.brochure-preview-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 34, 71, 0.45);
+}
+
+.brochure-preview-scroll:focus-visible {
+  outline: 3px solid #2C7BE5;
+  outline-offset: -3px;
+}
+
+.brochure-preview-page {
   width: 100%;
-  height: 100%;
-  border: none;
+  height: auto;
   display: block;
+}
+
+.brochure-preview-page + .brochure-preview-page {
+  margin-top: 10px;
 }
 
 .brochure-preview-label {
@@ -12068,7 +12095,7 @@ html[data-theme="light"] .track {
   }
 
   .brochure-preview-frame {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 612 / 792;
   }
 
   .brochure-contents {
