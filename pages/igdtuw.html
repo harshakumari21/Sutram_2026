@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{if(!localStorage.getItem("sutram-theme-v2")){localStorage.setItem("sutram-theme","light");localStorage.setItem("sutram-theme-v2","1");}var t=localStorage.getItem("sutram-theme");if(t!=="light"&&t!=="dark"){t="light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0E2247" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SUTRAM 2026 | IGDTUW" />
+<meta property="og:description" content="Indira Gandhi Delhi Technical University for Women" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SUTRAM 2026 | IGDTUW" />
+<meta name="twitter:description" content="Indira Gandhi Delhi Technical University for Women" />
+<meta name="description" content="Indira Gandhi Delhi Technical University for Women — SUTRAM 2026" />
+<title>SUTRAM 2026 | IGDTUW</title>
+<link rel="icon" type="image/png" href="../assets/images/logos/sutram_logo_final.png?v=4" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+
+<style>
+  .igdtuw-page {
+    background:
+      radial-gradient(circle at 10% 15%, rgba(0,180,216,.10), transparent 30%),
+      radial-gradient(circle at 90% 80%, rgba(217,164,65,.10), transparent 30%),
+      #f7f8fb;
+  }
+
+  .igdtuw-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 20px 70px;
+    background: linear-gradient(135deg, #eef8fc 0%, #f9fbff 100%);
+  }
+
+  .igdtuw-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(14,34,71,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,34,71,.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+
+  .igdtuw-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1160px, 92%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 52px;
+    align-items: center;
+  }
+
+  .igdtuw-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: #0077b6;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .igdtuw-eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 3px;
+    border-radius: 4px;
+    background: #d9a441;
+  }
+
+  .igdtuw-hero h1 {
+    margin: 0 0 20px;
+    color: #0e2247;
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.06;
+    letter-spacing: -.035em;
+  }
+
+  .igdtuw-hero h1 span {
+    color: #0077b6;
+  }
+
+  .igdtuw-hero p {
+    max-width: 650px;
+    color: #536b84;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .igdtuw-location {
+    display: inline-flex;
+    margin-top: 24px;
+    padding: 9px 15px;
+    border: 1px solid rgba(0,119,182,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.78);
+    color: #0e2247;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .igdtuw-image-card {
+    position: relative;
+  }
+
+  .igdtuw-campus-image {
+    width: 100%;
+    height: 380px;
+    display: block;
+    object-fit: cover;
+    border: 7px solid rgba(255,255,255,.94);
+    border-radius: 24px;
+    box-shadow: 0 24px 55px rgba(14,34,71,.16);
+  }
+
+  .igdtuw-image-caption {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 11px 14px;
+    border-radius: 11px;
+    background: rgba(8,21,48,.84);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+  }
+
+  .igdtuw-content {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 78px 0;
+  }
+
+  .igdtuw-heading {
+    max-width: 760px;
+    margin-bottom: 36px;
+  }
+
+  .igdtuw-label {
+    color: #0077b6;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+  }
+
+  .igdtuw-heading h2 {
+    margin-top: 9px;
+    color: #0e2247;
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+  }
+
+  .igdtuw-heading p {
+    margin-top: 14px;
+    color: #5a6b85;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .igdtuw-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .igdtuw-card {
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #dde3ee;
+    border-radius: 17px;
+    box-shadow: 0 10px 30px rgba(14,34,71,.055);
+  }
+
+  .igdtuw-card-number {
+    color: #d9a441;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+
+  .igdtuw-card h3 {
+    margin: 9px 0 8px;
+    color: #0e2247;
+    font-family: var(--font-heading);
+    font-size: 19px;
+  }
+
+  .igdtuw-card p {
+    color: #5a6b85;
+    font-size: 13.5px;
+    line-height: 1.75;
+  }
+
+  .igdtuw-focus {
+    background: #081530;
+  }
+
+  .igdtuw-focus .igdtuw-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .igdtuw-focus .igdtuw-heading h2 {
+    color: #f4f8fb;
+  }
+
+  .igdtuw-focus .igdtuw-heading p {
+    color: #b8c9dc;
+  }
+
+  .igdtuw-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .igdtuw-pill {
+    padding: 10px 15px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 999px;
+    background: rgba(255,255,255,.06);
+    color: #eaf7ff;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    .igdtuw-hero {
+      padding: 55px 0 52px;
+    }
+
+    .igdtuw-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .igdtuw-campus-image {
+      height: 290px;
+    }
+
+    .igdtuw-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .igdtuw-content {
+      padding: 58px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .igdtuw-hero h1 {
+      font-size: 37px;
+    }
+
+    .igdtuw-campus-image {
+      height: 235px;
+      border-width: 5px;
+      border-radius: 18px;
+    }
+
+    .igdtuw-image-caption {
+      left: 13px;
+      right: 13px;
+      bottom: 13px;
+      font-size: 11px;
+    }
+  }
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="page">
+<main class="announcement" id="main-content">
+  <header class="topbar">
+            <div class="topbar-left">
+          <a href="igdtuw.html" class="topbar-igdtuw-link" aria-label="Indira Gandhi Delhi Technical University for Women" title="Indira Gandhi Delhi Technical University for Women">
+            <img loading="eager" decoding="async" class="igdtuw-emblem theme-logo-light" src="assets/images/logos/igdtuw_logo.png" alt="" aria-hidden="true" />
+            <img loading="eager" decoding="async" class="igdtuw-emblem theme-logo-dark" src="assets/images/logos/igdtuw_logo.png" alt="" aria-hidden="true" />
+            <span class="igdtuw-wordmark"><strong>Indira Gandhi Delhi Technical University for Women</strong><small>(Established by Govt. of Delhi vide Act 9 of 2012)</small></span>
+          </a>
+        </div>
+
+    <a class="topbar-center-logo" href="index.html" aria-label="SUTRAM 2026 home">
+      <img loading="eager" decoding="async" class="theme-logo theme-logo-dark" src="assets/images/logos/sutram_logo_final.png?v=4" alt="SUTRAM 2026" /><img loading="eager" decoding="async" class="theme-logo theme-logo-light" src="assets/images/logos/sutram_logo_final.png?v=4" alt="" aria-hidden="true" />
+    </a>
+
+            <div class="topbar-right">
+          <div class="topbar-partner-logos">
+            <img loading="eager" decoding="async" class="partner-logo emblem-logo" src="assets/images/partners/Emblem_of_India_with_transparent_background.png" alt="Government of India emblem" title="Government of India" />
+            <img loading="eager" decoding="async" class="partner-logo isea-logo" src="assets/images/partners/isea_logo.png" alt="ISEA logo" title="Information Security Education and Awareness (ISEA)" />
+            <img loading="eager" decoding="async" class="partner-logo cdac-logo" src="assets/images/logos/cdac.png" alt="C-DAC" title="Centre for Development of Advanced Computing (C-DAC)" />
+            <img loading="eager" decoding="async" class="partner-logo nfsu-logo" src="assets/images/logos/nfsu_logo.png" alt="NFSU" title="National Forensic Sciences University (NFSU)" />
+            <img loading="eager" decoding="async" class="partner-logo mnit-logo" src="assets/images/logos/mnit_bhopal.png" alt="MANIT Bhopal" title="Maulana Azad National Institute of Technology, Bhopal" />
+            <img loading="eager" decoding="async" class="partner-logo iiit-logo" src="assets/images/logos/iiit_sonipat.png" alt="IIIT Sonepat" title="Indian Institute of Information Technology, Sonepat" />
+            <img loading="eager" decoding="async" class="partner-logo gtu-logo" src="assets/images/logos/gtu.png" alt="GTU" title="Gujarat Technological University (GTU)" />
+          </div>
+        </div>
+
+    <button type="button" class="hamburger-btn" id="menuToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Toggle navigation menu" title="Navigation Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+  <div class="notification-marquee">
+    <div class="marquee-css"><span class="marquee-css-track">
+      <span class="marquee-text">Welcome to SUTRAM 2026 &mdash; The Premier AI-Powered Cyber Investigation &amp; Digital Forensics <span class="highlight">HACKATHON</span>! Get ready to innovate, investigate, and inspire justice!</span>
+    </span></div>
+  </div>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+
+    <div class="nav-item">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a href="about.html">About SUTRAM</a>
+        <a class="active" href="igdtuw.html">IGDTUW</a>
+        <a href="collaborators.html">Collaborators</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Event Information <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a href="guidelines.html">Guidelines &amp; Policies</a>
+        <a href="evaluation.html">Evaluation Criteria</a>
+        <a href="brochure.html">Brochure</a>
+        <a href="mentors.html">Mentors</a>
+        <a class="active" href="jury.html">Jury</a>
+        <a href="committee.html">Committee</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Hackathon Journey <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu">
+        <a href="problem-statements.html">Problem Statements</a>
+        <a href="https://faas.isea.app/formview/Hackathon2026">Registration and PPT Submission</a>
+        <a class="nav-template-link" href="SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">Download PPT Template</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="results.html">Results</a>
+        <div class="nav-dropdown-divider"></div>
+        <span class="nav-dropdown-section-label">Up Next</span>
+        <div class="nav-timeline-inline" data-timeline-panel>
+          <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-05"><span class="nav-timeline-label">Registration / Idea Submission Opens</span><span class="nav-timeline-value" data-date="2026-09-07">7 Sep 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-05"><span class="nav-timeline-label">Registration / Idea Submission Closes</span><span class="nav-timeline-value" data-date="2026-10-05">5 Oct 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="2" data-roll-date="2026-10-25"><span class="nav-timeline-label">First Round Results</span><span class="nav-timeline-value" data-date="2026-10-25">25 Oct 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="3" data-roll-date="2026-10-28"><span class="nav-timeline-label">Problem Statement Release</span><span class="nav-timeline-value" data-date="2026-10-28">28 Oct 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="4" data-roll-date="2026-11-10"><span class="nav-timeline-label">Mentorship Sessions</span><span class="nav-timeline-value" data-date="2026-11-01">1–10 Nov 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="5" data-roll-date="2026-11-20"><span class="nav-timeline-label">Prototype / PPT Submission</span><span class="nav-timeline-value" data-date="2026-11-20">20 Nov 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="6" data-roll-date="2026-12-05"><span class="nav-timeline-label">Final 25 Teams Selected</span><span class="nav-timeline-value" data-date="2026-12-05">5 Dec 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Hackathon Finale</span><span class="nav-timeline-value" data-date="2026-12-26">26–27 Dec 2026</span></div>
+          <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Winner Announcement</span><span class="nav-timeline-value" data-date="2026-12-27">27 Dec 2026</span></div>
+          <p class="nav-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</p>
+        </div>
+        <a class="nav-dropdown-link" href="timeline.html">View Full Timeline ↗</a>
+      </div>
+  </div>
+
+    <a href="collaborators.html">Collaborators</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <main class="igdtuw-page">
+    <section class="igdtuw-hero">
+      <div class="igdtuw-hero-inner">
+        <div>
+          <div class="igdtuw-eyebrow">Host Institution</div>
+          <h1>Indira Gandhi Delhi <span>Technical University for Women</span></h1>
+          <p>
+            Indira Gandhi Delhi Technical University for Women (IGDTUW) is a
+            women-focused technical university in Delhi committed to education,
+            research, innovation and technology-driven excellence.
+          </p>
+          <div class="igdtuw-location">Kashmere Gate, Delhi — 110006</div>
+        </div>
+
+        <div class="igdtuw-image-card">
+          <img
+            class="igdtuw-campus-image"
+            src="https://www.igdtuw.ac.in/images/slider/slider1.jpg"
+            alt="Indira Gandhi Delhi Technical University for Women campus"
+            loading="eager"
+            decoding="async">
+          <div class="igdtuw-image-caption">IGDTUW Campus • Kashmere Gate, Delhi</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="igdtuw-content">
+      <div class="igdtuw-heading">
+        <div class="igdtuw-label">About IGDTUW</div>
+        <h2>Education, Innovation &amp; Empowerment</h2>
+        <p>
+          IGDTUW provides an academic environment focused on technical
+          education, research, innovation, entrepreneurship and the advancement
+          of women in technology.
+        </p>
+      </div>
+
+      <div class="igdtuw-cards">
+        <article class="igdtuw-card">
+          <div class="igdtuw-card-number">01</div>
+          <h3>Technical Education</h3>
+          <p>Academic programmes cover engineering, technology, applied sciences, architecture and allied professional areas.</p>
+        </article>
+
+        <article class="igdtuw-card">
+          <div class="igdtuw-card-number">02</div>
+          <h3>Research &amp; Innovation</h3>
+          <p>A strong research and innovation ecosystem encourages technology development and interdisciplinary work.</p>
+        </article>
+
+        <article class="igdtuw-card">
+          <div class="igdtuw-card-number">03</div>
+          <h3>Women in Technology</h3>
+          <p>The university promotes opportunities for women to learn, innovate, lead and contribute to emerging technologies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="igdtuw-focus">
+      <div class="igdtuw-content">
+        <div class="igdtuw-heading">
+          <div class="igdtuw-label">Academic &amp; Research Focus</div>
+          <h2>Building the Next Generation of Women Technologists</h2>
+          <p>Key areas represented across the university's technical and interdisciplinary ecosystem.</p>
+        </div>
+
+        <div class="igdtuw-pills">
+          <span class="igdtuw-pill">Computer Science &amp; Engineering</span>
+          <span class="igdtuw-pill">Information Technology</span>
+          <span class="igdtuw-pill">Artificial Intelligence</span>
+          <span class="igdtuw-pill">Data Sciences</span>
+          <span class="igdtuw-pill">Electronics &amp; Communication</span>
+          <span class="igdtuw-pill">Mechanical &amp; Automation</span>
+          <span class="igdtuw-pill">Architecture &amp; Planning</span>
+          <span class="igdtuw-pill">Applied Sciences</span>
+          <span class="igdtuw-pill">Research &amp; Innovation</span>
+          <span class="igdtuw-pill">Entrepreneurship</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="footer-container">
+      <section class="footer-col">
+        <h2>Follow Us</h2>
+        <div class="social-buttons">
+          <a href="https://www.instagram.com/sutram_2026?igsh=MTRsaG00M3dqNG5oaA==" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
+          <a href="https://chat.whatsapp.com/GdZ1pulNiuoJmmW5uX4iJ7?s=sh&p=a&ilr=0" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+          </a>
+          <a href="https://t.me/sutram2026" class="social-btn" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            Telegram
+          </a>
+        </div>
+      </section>
+
+      <section class="footer-col" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-list">
+          <a href="mailto:isea@igdtuw.ac.in" class="contact-link-item">
+            <span class="contact-icon-badge" aria-hidden="true">📧</span>
+            <span>isea@igdtuw.ac.in</span>
+          </a>
+          <a href="tel:+919311434225" class="contact-link-item">
+            <span class="contact-icon-badge" aria-hidden="true">📞</span>
+            <span>+91 9311434225</span>
+          </a>
+          <div class="contact-link-item">
+            <span class="contact-icon-badge" aria-hidden="true">🏛</span>
+            <span>Indira Gandhi Delhi Technical University for Women, James Church, New Church Rd, Opp. St, Kashmere Gate, New Delhi, Delhi 110006</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="footer-sitemap-wrap" aria-label="Website sitemap">
+          <ul class="footer-sitemap">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About SUTRAM</a></li>
+            <li><a href="collaborators.html">Collaborators</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+            <li><a href="brochure.html">Brochure</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="jury.html">Jury</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="journey.html">Journey</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="problem-statements.html">Problem Statements</a></li>
+            <li><a href="participation.html">Participation</a></li>
+            <li><a href="prizes.html">Prizes</a></li>
+            <li><a href="submission.html">Submission</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-bottom-bar">
+      <span>&copy; 2026 SUTRAM &middot; IGDTUW</span>
+      <span>Ministry of Electronics &amp; Information Technology (MeitY) &middot; Government of India</span>
+    </div>
+  </footer>
+</main>
+</div>
+<!-- Slide-Out Navigation Drawer -->
+<nav class="nav-drawer" id="navDrawer" aria-label="Site navigation" aria-hidden="true" role="dialog">
+  <div class="drawer-header">
+    <span class="drawer-title">Main Menu</span>
+    <button type="button" class="close-drawer" id="closeDrawer" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="drawer-links">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="drawer-group">
+        <button type="button" class="drawer-group-toggle" aria-expanded="false">About <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li class="drawer-sublist-label">About</li>
+          <li><a href="about.html">About SUTRAM</a></li>
+          <li><a class="active" href="igdtuw.html">IGDTUW</a></li>
+          <li><a href="collaborators.html">Collaborators</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
+        <button type="button" class="drawer-group-toggle" aria-expanded="false">Event Information <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li class="drawer-sublist-label">Event Information</li>
+          <li><a href="guidelines.html">Guidelines &amp; Policies</a></li>
+          <li><a href="evaluation.html">Evaluation Criteria</a></li>
+          <li><a href="brochure.html">Brochure</a></li>
+          <li><a href="mentors.html">Mentors</a></li>
+          <li><a class="active" href="jury.html">Jury</a></li>
+          <li><a href="committee.html">Committee</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
+        <button type="button" class="drawer-group-toggle" aria-expanded="false">Hackathon Journey <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist" data-timeline-panel>
+          <li class="drawer-sublist-label">Hackathon Journey</li>
+          <li><a href="problem-statements.html">Problem Statements</a></li>
+          <li><a href="https://faas.isea.app/formview/Hackathon2026">Registration and PPT Submission</a></li>
+          <li><a class="drawer-template-link" href="SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">Download PPT Template</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li class="drawer-sublist-divider">Up Next</li>
+          <li class="drawer-timeline-row" data-timeline-group="1" data-roll-date="2026-10-05"><span class="drawer-timeline-label">Registration / Idea Submission Opens</span><span class="drawer-timeline-value" data-date="2026-09-07">7 Sep 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="1" data-roll-date="2026-10-05"><span class="drawer-timeline-label">Registration / Idea Submission Closes</span><span class="drawer-timeline-value" data-date="2026-10-05">5 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="2" data-roll-date="2026-10-25"><span class="drawer-timeline-label">First Round Results</span><span class="drawer-timeline-value" data-date="2026-10-25">25 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="3" data-roll-date="2026-10-28"><span class="drawer-timeline-label">Problem Statement Release</span><span class="drawer-timeline-value" data-date="2026-10-28">28 Oct 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="4" data-roll-date="2026-11-10"><span class="drawer-timeline-label">Mentorship Sessions</span><span class="drawer-timeline-value" data-date="2026-11-01">1&ndash;10 Nov 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="5" data-roll-date="2026-11-20"><span class="drawer-timeline-label">Prototype / PPT Submission</span><span class="drawer-timeline-value" data-date="2026-11-20">20 Nov 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="6" data-roll-date="2026-12-05"><span class="drawer-timeline-label">Final 25 Teams Selected</span><span class="drawer-timeline-value" data-date="2026-12-05">5 Dec 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="drawer-timeline-label">Hackathon Finale</span><span class="drawer-timeline-value" data-date="2026-12-26">26&ndash;27 Dec 2026</span></li>
+          <li class="drawer-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="drawer-timeline-label">Winner Announcement</span><span class="drawer-timeline-value" data-date="2026-12-27">27 Dec 2026</span></li>
+          <li class="drawer-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</li>
+          <li><a href="timeline.html">View Full Timeline ↗</a></li>
+        </ul>
+      </li>
+
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="https://faas.isea.app/formview/Hackathon2026" rel="noopener">Register</a></li>
+    </ul>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
