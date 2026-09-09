@@ -15417,9 +15417,22 @@ textarea {
   width: 100%;
 }
 
+.committee-leadership-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.committee-leadership-grid .jury-card {
+  grid-column: 1;
+  max-width: none;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .committee-grid-single {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-leadership-grid {
     grid-template-columns: 1fr;
   }
 
