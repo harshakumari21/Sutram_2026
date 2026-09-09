@@ -15376,92 +15376,59 @@ textarea {
     scroll-behavior: auto;
   }
 }
-/* =========================================
-   PATRON & ADVISOR - SAME SIZE AS 3-COLUMN CARDS
-========================================= */
-
-.committee-grid-single {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.committee-grid-single .jury-card {
-  grid-column: 2;
-  width: 100%;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .committee-grid-single {
-    grid-template-columns: 1fr;
-  }
-
-  .committee-grid-single .jury-card {
-    grid-column: 1;
-  }
-}
-
-/* ============================================================
-   COMMITTEE LEADERSHIP — PATRON & ADVISOR
-   Same card dimensions as the 3-column committee cards.
-   Desktop: centered in the 3-column row.
-   Mobile: full-width single-column card.
-   ============================================================ */
+/* ==========================================================
+   FINAL FIX — PATRON & ADVISOR CENTER ALIGNMENT
+   ========================================================== */
 
 .committee-leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  align-items: start;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
 }
 
 .committee-leadership-grid .jury-card {
-  grid-column: 2;
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  margin: 0;
+  grid-column: 2 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
 }
 
-/* Keep the Patron/Advisor card visually identical to normal jury cards. */
+/* Image */
 .committee-leadership-grid .jury-card-img-wrap {
-  aspect-ratio: 1 / 1;
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
 }
 
 .committee-leadership-grid .jury-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 /* Tablet */
-@media (max-width: 900px) and (min-width: 769px) {
+@media (max-width: 900px) {
   .committee-leadership-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .committee-leadership-grid .jury-card {
-    grid-column: 1;
+    grid-column: 1 !important;
   }
 }
 
-/* Phone */
+/* Mobile */
 @media (max-width: 768px) {
   .committee-leadership-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    max-width: 360px;
-    margin: 0 auto;
+    grid-template-columns: 1fr !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
   }
 
   .committee-leadership-grid .jury-card {
-    grid-column: 1;
-    width: 100%;
+    grid-column: 1 !important;
   }
 }
