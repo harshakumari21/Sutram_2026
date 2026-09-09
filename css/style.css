@@ -15376,59 +15376,299 @@ textarea {
     scroll-behavior: auto;
   }
 }
-/* ==========================================================
-   FINAL FIX — PATRON & ADVISOR CENTER ALIGNMENT
-   ========================================================== */
+/* =========================================
+   PATRON & ADVISOR - SAME SIZE AS 3-COLUMN CARDS
+========================================= */
+
+.committee-grid-single {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.committee-grid-single .jury-card {
+  grid-column: 2;
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .committee-grid-single {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-grid-single .jury-card {
+    grid-column: 1;
+  }
+}
+/* =========================================
+   PATRON & ADVISOR - SAME SIZE AS 3-COLUMN CARDS
+   LEFT ALIGNED
+========================================= */
+
+.committee-grid-single {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.committee-grid-single .jury-card {
+  grid-column: 1;
+  width: 100%;
+}
 
 .committee-leadership-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 28px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .committee-leadership-grid .jury-card {
-  grid-column: 2 !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
+  grid-column: 1;
+  max-width: none;
 }
 
-/* Image */
-.committee-leadership-grid .jury-card-img-wrap {
-  width: 100% !important;
-  aspect-ratio: 1 / 1 !important;
-}
-
-.committee-leadership-grid .jury-card-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .committee-leadership-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-
-  .committee-leadership-grid .jury-card {
-    grid-column: 1 !important;
-  }
-}
-
-/* Mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .committee-leadership-grid {
-    grid-template-columns: 1fr !important;
-    max-width: 360px !important;
-    margin: 0 auto !important;
+  .committee-grid-single {
+    grid-template-columns: 1fr;
   }
 
-  .committee-leadership-grid .jury-card {
-    grid-column: 1 !important;
+  .committee-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-grid-single .jury-card {
+    grid-column: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER — SLIGHTLY LARGER 3 LOGOS
+   IGDTUW | SUTRAM | ISEA
+   Desktop design remains unchanged
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .topbar {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(160px, 1fr) auto;
+    align-items: center;
+    column-gap: 8px;
+    min-height: 82px;
+    padding: 6px 58px 6px 58px;
+  }
+
+  /* HAMBURGER */
+  .hamburger-btn {
+    left: 10px !important;
+    right: auto !important;
+    z-index: 10;
+  }
+
+  /* =========================
+     IGDTUW LOGO
+     ========================= */
+  .topbar-left {
+    position: static !important;
+    grid-column: 1;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0;
+    margin: 0;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+    z-index: 3;
+  }
+
+  .topbar-igdtuw-link {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: visible;
+  }
+
+  .topbar .igdtuw-emblem {
+    width: 58px !important;
+    height: 58px !important;
+    flex: 0 0 58px !important;
+    transform: none !important;
+    object-fit: contain;
+  }
+
+  .igdtuw-wordmark {
+    display: none;
+  }
+
+  /* =========================
+     SUTRAM LOGO
+     ========================= */
+  a.topbar-center-logo,
+  .topbar-center-logo {
+    position: static !important;
+    grid-column: 2;
+    justify-self: end;
+    transform: none !important;
+
+    width: min(225px, 50vw) !important;
+    min-width: 0;
+
+    height: 64px !important;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    overflow: visible;
+    z-index: 4;
+  }
+
+  .topbar-center-logo img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
+
+  /* =========================
+     ISEA LOGO
+     ========================= */
+  .topbar-right {
+    grid-column: 3;
+    width: auto !important;
+    min-width: 46px !important;
+    height: auto;
+    padding-right: 0 !important;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    overflow: visible;
+    z-index: 3;
+  }
+
+  .topbar-partner-logos {
+    width: auto !important;
+    max-width: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 3px;
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .topbar-partner-logos .partner-logo:not(.isea-logo) {
+    display: none !important;
+  }
+
+  .topbar-partner-logos .partner-logo.isea-logo {
+    display: block !important;
+
+    width: 46px !important;
+    max-width: 46px !important;
+
+    height: 36px !important;
+    flex: 0 0 46px;
+
+    object-fit: contain;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .topbar {
+    grid-template-columns: 58px minmax(0, 1fr) 46px;
+    column-gap: 5px;
+
+    min-height: 78px;
+
+    padding: 6px 7px 6px 58px;
+  }
+
+  /* IGDTUW */
+  .topbar .igdtuw-emblem {
+    width: 52px !important;
+    height: 52px !important;
+    flex-basis: 52px !important;
+  }
+
+  /* SUTRAM */
+  a.topbar-center-logo,
+  .topbar-center-logo {
+    width: min(220px, 53vw) !important;
+    height: 60px !important;
+  }
+
+  /* ISEA */
+  .topbar-partner-logos .partner-logo.isea-logo {
+    width: 44px !important;
+    max-width: 44px !important;
+    height: 35px !important;
+    flex-basis: 44px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .topbar {
+    grid-template-columns: 52px minmax(0, 1fr) 42px;
+    column-gap: 4px;
+
+    min-height: 72px;
+
+    padding: 5px 5px 5px 50px;
+  }
+
+  /* Hamburger */
+  .hamburger-btn {
+    left: 8px !important;
+    width: 34px !important;
+    height: 34px !important;
+    padding: 7px !important;
+  }
+
+  /* IGDTUW */
+  .topbar .igdtuw-emblem {
+    width: 48px !important;
+    height: 48px !important;
+    flex-basis: 48px !important;
+  }
+
+  /* SUTRAM */
+  a.topbar-center-logo,
+  .topbar-center-logo {
+    width: min(200px, 55vw) !important;
+    height: 56px !important;
+  }
+
+  /* ISEA */
+  .topbar-partner-logos .partner-logo.isea-logo {
+    width: 40px !important;
+    max-width: 40px !important;
+    height: 32px !important;
+    flex-basis: 40px;
   }
 }
