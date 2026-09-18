@@ -15680,3 +15680,35 @@ textarea {
     flex-basis: 40px;
   }
 }
+/* Academic credential line — sits under the organisation on a mentor
+   card, for a qualification that isn't the person's current posting. */
+.jury-card-credential {
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--hx-dim, #6b7a99);
+  opacity: 0.85;
+  margin: 2px 0 0;
+  line-height: 1.45;
+}
+
+[data-theme="dark"] .jury-card-credential {
+  color: #7a8eaa;
+}
+
+/* Placeholder shown while a roster (e.g. student coordinators) is still
+   being finalised, in place of the usual card grid. */
+.roster-empty {
+  padding: 56px 24px;
+  text-align: center;
+  border: 1px dashed rgba(0, 119, 182, 0.35);
+  border-radius: 16px;
+  background: rgba(0, 180, 216, 0.04);
+  color: var(--ink-muted, #5a6b85);
+  font-size: 0.95rem;
+}
+
+[data-theme="dark"] .roster-empty {
+  border-color: rgba(0, 229, 255, 0.28);
+  background: rgba(0, 229, 255, 0.04);
+  color: var(--hx-dim, #cbd5e1);
+}

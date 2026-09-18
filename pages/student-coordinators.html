@@ -22,13 +22,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0E2247" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="SUTRAM 2026 | Mentors" />
-    <meta property="og:description" content="SUTRAM 2026 — Mentors" />
+    <meta property="og:title" content="SUTRAM 2026 | Student Coordinators" />
+    <meta
+      property="og:description"
+      content="SUTRAM 2026 — Student Coordinators"
+    />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="SUTRAM 2026 | Mentors" />
-    <meta name="twitter:description" content="SUTRAM 2026 — Mentors" />
-    <meta name="description" content="SUTRAM 2026 — Mentors" />
-    <title>SUTRAM 2026 | Mentors</title>
+    <meta name="twitter:title" content="SUTRAM 2026 | Student Coordinators" />
+    <meta
+      name="twitter:description"
+      content="SUTRAM 2026 — Student Coordinators"
+    />
+    <meta name="description" content="SUTRAM 2026 — Student Coordinators" />
+    <title>SUTRAM 2026 | Student Coordinators</title>
     <link
       rel="icon"
       type="image/png"
@@ -42,150 +48,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
-
-    <style>
-      /* =========================================================
-     MENTOR PAGE — CLEAN CARD REDESIGN
-     ========================================================= */
-
-      .mentor-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 24px;
-        align-items: stretch;
-      }
-
-      .mentor-card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        border-radius: 18px;
-        background: #fff;
-        border: 1px solid rgba(14, 34, 71, 0.1);
-        box-shadow: 0 10px 30px rgba(14, 34, 71, 0.08);
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-
-      .mentor-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 42px rgba(14, 34, 71, 0.15);
-      }
-
-      .mentor-visual {
-        position: relative;
-        width: 100%;
-        height: 280px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background: linear-gradient(135deg, #0e2247, #183b73);
-      }
-
-      .mentor-visual .jury-card-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
-        transition: transform 0.35s ease;
-      }
-
-      .mentor-card:hover .mentor-visual .jury-card-img {
-        transform: scale(1.035);
-      }
-
-      .mentor-visual::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(5, 18, 42, 0.28),
-          transparent 42%
-        );
-        pointer-events: none;
-      }
-
-      .mentor-initial {
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-        font-size: 2rem;
-        font-weight: 800;
-        border: 3px solid rgba(255, 255, 255, 0.75);
-        background: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
-        position: relative;
-        z-index: 2;
-      }
-
-      .mentor-card .jury-card-body {
-        flex: 1;
-        min-height: 160px;
-        padding: 22px 20px 20px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .mentor-card .jury-card-name {
-        margin-bottom: 8px;
-        line-height: 1.25;
-      }
-
-      .mentor-card .jury-card-designation {
-        line-height: 1.45;
-      }
-
-      .mentor-card .jury-card-divider {
-        margin: 13px 0;
-      }
-
-      .mentor-card .jury-card-org {
-        margin-top: auto;
-        line-height: 1.45;
-      }
-
-      @media (max-width: 1100px) {
-        .mentor-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-      }
-
-      @media (max-width: 760px) {
-        .mentor-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 18px;
-        }
-
-        .mentor-visual {
-          height: 240px;
-        }
-
-        .mentor-card .jury-card-body {
-          min-height: 150px;
-          padding: 18px 16px;
-        }
-      }
-
-      @media (max-width: 520px) {
-        .mentor-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .mentor-visual {
-          height: 290px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -305,6 +167,14 @@
                 alt="GTU"
                 title="Gujarat Technological University (GTU)"
               />
+              <img
+                loading="eager"
+                decoding="async"
+                class="partner-logo fsl-logo"
+                src="../assets/images/logos/fsl_transparent.png"
+                alt="Forensic Science Laboratory"
+                title="Forensic Science Laboratory"
+              />
             </div>
           </div>
 
@@ -350,6 +220,7 @@
             </button>
             <div class="nav-dropdown-menu">
               <a href="about.html">About SUTRAM</a>
+              <a href="igdtuw.html">IGDTUW</a>
               <a href="collaborators.html">Collaborators</a>
             </div>
           </div>
@@ -367,10 +238,12 @@
               <a href="guidelines.html">Guidelines &amp; Policies</a>
               <a href="evaluation.html">Evaluation Criteria</a>
               <a href="brochure.html">Brochure</a>
-              <a class="active" href="mentors.html">Mentors</a>
+              <a href="mentors.html">Mentors</a>
               <a href="jury.html">Jury</a>
               <a href="committee.html">Committee</a>
-              <a href="student-coordinators.html">Student Coordinators</a>
+              <a class="active" href="student-coordinators.html"
+                >Student Coordinators</a
+              >
             </div>
           </div>
 
@@ -514,454 +387,231 @@
 
           <div class="subpage-hero-content">
             <span class="subpage-eyebrow">SUTRAM 2026</span>
-            <h1>Our <span>Mentors</span></h1>
+            <h1>Student <span>Coordinators</span></h1>
             <p>
-              The domain experts guiding shortlisted teams through the
-              mentorship phase of SUTRAM 2026.
+              The student team coordinating SUTRAM 2026 across registration,
+              logistics, and participant support.
             </p>
           </div>
         </section>
 
         <!-- CONTENT -->
-        <section class="subpage-section jury-section">
+        <section class="subpage-section jury-section coordinators-section">
           <div class="subpage-container">
             <div class="jury-intro">
               <p>
-                Our mentor panel comprises accomplished leaders from academia,
-                industry, and technology — guiding shortlisted teams through
-                problem refinement, prototype development, and final
-                presentations at SUTRAM 2026.
+                Meet the student coordinators of SUTRAM 2026 — the team
+                supporting participants through registration, mentorship
+                scheduling, submissions, and event-day operations.
               </p>
             </div>
 
-            <div class="jury-grid mentor-grid">
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+            <div class="jury-grid coordinators-grid">
+              <!-- 1. Preeti -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/parag.jpg"
-                    alt="Prof. (Dr.) Parag H. Rughani"
+                    src="../assets/images/social/preeti.jpg"
+                    alt="Preeti"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Prof. (Dr.) Parag H. Rughani</h3>
-                  <span class="jury-card-designation">Dean</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">
-                    National Forensic Sciences University (NFSU), Gandhinagar
-                  </p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/anup_giridhar.jpg"
-                    alt="Dr. Anup Giridhar"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Anup Giridhar</h3>
+                  <h3 class="jury-card-name">Preeti</h3>
                   <span class="jury-card-designation"
-                    >Industry Leader & Innovator</span
+                    >PhD Scholar, JRF, IT</span
                   >
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">CEO, Sedulity Groups</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 2. Aanchal Gautam -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/deepak_tomar.jpg"
-                    alt="Dr. Deepak Tomar"
+                    src="../assets/images/social/aanchal_gautam.jpg"
+                    alt="Aanchal Gautam"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Deepak Tomar</h3>
-                  <span class="jury-card-designation">Professor</span>
+                  <h3 class="jury-card-name">Aanchal Gautam</h3>
+                  <span class="jury-card-designation">JRF, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">MANIT Bhopal</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 3. Lashika Bhartiya -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/bhoopesh.png"
-                    alt="Dr. Bhoopesh Singh Bhati"
+                    src="../assets/images/social/lashika_bhartiya.jpg"
+                    alt="Lashika Bhartiya"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Bhoopesh Singh Bhati</h3>
-                  <span class="jury-card-designation">Assistant Professor</span>
+                  <h3 class="jury-card-name">Lashika Bhartiya</h3>
+                  <span class="jury-card-designation">PhD Scholar, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IIIT Sonepat</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 4. Somssi Pathania -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/chanchal_kumar.jpg"
-                    alt="Dr. Chanchal Kumar"
+                    src="../assets/images/social/somssi_pathania.jpg"
+                    alt="Somssi Pathania"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Chanchal Kumar</h3>
-                  <span class="jury-card-designation">Assistant Professor</span>
+                  <h3 class="jury-card-name">Somssi Pathania</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IIIT Sonepat</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/rk pillai.jpg"
-                    alt="Mr. R. K. Pillai"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
+              <!-- 5. Narayani -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap jury-card-img-placeholder">
+                  <span class="jury-avatar-initials" aria-hidden="true">N</span>
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Mr. R. K. Pillai</h3>
-                  <span class="jury-card-designation">President</span>
+                  <h3 class="jury-card-name">Narayani</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">AIIPL Tech Pvt. Ltd.</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <div class="mentor-initial" aria-hidden="true">PP</div>
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Prof. Pankaj Kumar</h3>
-                  <span class="jury-card-designation">Mentor</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">Academic / Technology Expert</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <div class="mentor-initial" aria-hidden="true">PC</div>
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Prof. Chandra Prakash</h3>
-                  <span class="jury-card-designation">HoD, AI & ML</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">MNIT Jaipur</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/aurobindo_kar.jpg"
-                    alt="Dr. Aurobindo Kar"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Aurobindo Kar</h3>
-                  <span class="jury-card-designation">Associate Professor</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">Crypto Forensics Expert</p>
-                  <p class="jury-card-credential">PhD, IIT Kharagpur</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div
-                  class="jury-card-img-wrap mentor-visual jury-card-img-placeholder"
-                >
+              <!-- 6. Harsha Kumari -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap jury-card-img-placeholder">
                   <span class="jury-avatar-initials" aria-hidden="true"
-                    >DN</span
+                    >HK</span
                   >
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Debabrata Nayak</h3>
-                  <span class="jury-card-designation"
-                    >Director, Cyber Security Division</span
-                  >
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">PwC</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/sudhir.jpeg"
-                    alt="Dr. Sudhir Singh"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Sudhir Singh</h3>
-                  <span class="jury-card-designation"
-                    >Assistant Professor & Co-PI, ISEA</span
-                  >
+                  <h3 class="jury-card-name">Harsha Kumari</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
                   <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 7. Nandini Sharma -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/mohapatra_ak.png"
-                    alt="Prof. Dr. A. K. Mohapatra"
+                    src="../assets/images/social/nandini_sharma.jpg"
+                    alt="Nandini Sharma"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Prof. A. K. Mohapatra</h3>
-                  <span class="jury-card-designation"
-                    >Chief Investigator, ISEA Project
-                  </span>
+                  <h3 class="jury-card-name">Nandini Sharma</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
                   <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 8. Anushka Saxena -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/vivekananda%20jha.jpeg"
-                    alt="Prof. Vivekananda Jha"
+                    src="../assets/images/social/anushka_saxena.jpg"
+                    alt="Anushka Saxena"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Prof. Vivekananda Jha</h3>
-                  <span class="jury-card-designation">Professor, CSE</span>
+                  <h3 class="jury-card-name">Anushka Saxena</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
                   <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 9. Niharika Tyagi -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/bhavna.jpeg"
-                    alt="Dr. Bhawna Narwal"
+                    src="../assets/images/social/niharika_tyagi.jpg"
+                    alt="Niharika Tyagi"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Bhawna Narwal</h3>
-                  <span class="jury-card-designation">Faculty</span>
+                  <h3 class="jury-card-name">Niharika Tyagi</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
+              <!-- 10. Vibhuti Srivastava -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap">
                   <img
                     decoding="async"
-                    src="../assets/images/social/gaurav.jpg"
-                    alt="Dr. Gaurav Indra"
+                    src="../assets/images/social/vibhuti_srivastava.jpg"
+                    alt="Vibhuti Srivastava"
                     class="jury-card-img"
                     loading="lazy"
                   />
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Gaurav Indra</h3>
-                  <span class="jury-card-designation">Faculty</span>
+                  <h3 class="jury-card-name">Vibhuti Srivastava</h3>
+                  <span class="jury-card-designation">M.Tech, IT</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
+              </div>
 
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/mohana.jpg"
-                    alt="Dr. Mohona Ghosh"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
+              <!-- 11. Suhani -->
+              <div class="jury-card">
+                <div class="jury-card-img-wrap jury-card-img-placeholder">
+                  <span class="jury-avatar-initials" aria-hidden="true">S</span>
                   <div class="jury-card-overlay"></div>
                 </div>
                 <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Mohona Ghosh</h3>
-                  <span class="jury-card-designation">Faculty</span>
+                  <h3 class="jury-card-name">Suhani</h3>
+                  <span class="jury-card-designation">B.Tech, ECE</span>
                   <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
+                  <p class="jury-card-org">IGDTUW</p>
                 </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/alongbar_wary.jpg"
-                    alt="Dr. Alongbar Wary"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Alongbar Wary</h3>
-                  <span class="jury-card-designation">Faculty</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/shweta.jpg.jpeg"
-                    alt="Dr. Shweta Jindal"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Shweta Jindal</h3>
-                  <span class="jury-card-designation">Faculty</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/deepika_suhag.jpg"
-                    alt="Ms. Deepika Suhag"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Ms. Deepika Suhag</h3>
-                  <span class="jury-card-designation">Faculty</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/anjum.jpg"
-                    alt="Dr. Anjum Rathee"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Anjum Rathee</h3>
-                  <span class="jury-card-designation">Faculty</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
-                </div>
-              </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/jyoti shokeen.jpg"
-                    alt="Dr. Jyoti Shokeen"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Dr. Jyoti Shokeen</h3>
-                  <span class="jury-card-designation">Faculty</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">IGDTUW – IT Department</p>
-                </div>
-              </article>
-
-        <article class="jury-card mentor-card">
-          <div class="jury-card-img-wrap mentor-visual jury-card-img-placeholder">
-            <span class="jury-avatar-initials" aria-hidden="true">CG</span>
-            <div class="jury-card-overlay"></div>
-          </div>
-          <div class="jury-card-body">
-            <h3 class="jury-card-name">Dr. Charu Gupta</h3>
-            <span class="jury-card-designation">Faculty</span>
-            <div class="jury-card-divider"></div>
-            <p class="jury-card-org">IGDTUW – IT Department</p>
-          </div>
-        </article>
-
-              <article class="jury-card mentor-card">
-                <div class="jury-card-img-wrap mentor-visual">
-                  <img
-                    decoding="async"
-                    src="../assets/images/social/priyanka.jpg"
-                    alt="Ms. Priyanka"
-                    class="jury-card-img"
-                    loading="lazy"
-                  />
-                  <div class="jury-card-overlay"></div>
-                </div>
-                <div class="jury-card-body">
-                  <h3 class="jury-card-name">Ms. Priyanka</h3>
-                  <span class="jury-card-designation">Software Engineer</span>
-                  <div class="jury-card-divider"></div>
-                  <p class="jury-card-org">Microsoft</p>
-                </div>
-              </article>
+              </div>
             </div>
             <!-- /.jury-grid -->
           </div>
@@ -1165,11 +815,13 @@
             <li><a href="guidelines.html">Guidelines &amp; Policies</a></li>
             <li><a href="evaluation.html">Evaluation Criteria</a></li>
             <li><a href="brochure.html">Brochure</a></li>
-            <li><a class="active" href="mentors.html">Mentors</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
             <li><a href="jury.html">Jury</a></li>
             <li><a href="committee.html">Committee</a></li>
             <li>
-              <a href="student-coordinators.html">Student Coordinators</a>
+              <a class="active" href="student-coordinators.html"
+                >Student Coordinators</a
+              >
             </li>
           </ul>
         </li>
